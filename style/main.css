@@ -1,0 +1,133 @@
+body {
+    background: #FFFFFF;
+    color: #177165;
+}
+
+li{list-style-type: none;}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+.wrapper {
+    position: relative;
+}
+
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+.firstblock {
+    margin-bottom: 60px;
+}
+
+.firstblock::after {
+    content: '';
+    min-width: 100%;
+    min-height: 895px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #177165;
+} 
+
+header {
+    min-height: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {display: flex;
+margin-left: -145px;
+}
+
+header li {
+    margin-right: 50px;
+}
+header li:last-child {
+    margin-right: 0;
+}
+
+header a {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #A4D6CF;
+}
+header a:hover {
+    color: #fff;
+    transition: .3s linear;
+}
+
+
+header div {
+    position: relative;
+}
+
+header div::before {
+    content: '';
+    min-width: 44px;
+    min-height: 44px;
+    position: absolute;
+    left: -48%;
+    top: 11%;
+    background-image: url('./phone.png');
+}
+
+header h2 {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    margin-right: 14px;
+}
+
+header div h2:nth-child(1) {
+    color: #A4D6CF;
+}
+header div h2:nth-child(2) {
+    color: #FFFFFF;
+}
