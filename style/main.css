@@ -214,3 +214,116 @@ header div h2:nth-child(2) {
 .secondblock img {
     margin-right: 87px;
 }
+
+.thirdblock {
+    margin-bottom: 100px;
+}
+
+
+.thirdblock_inner {
+    margin-left: 80px;
+}
+
+.thirdblock_inner h4 {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    position: relative;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #777777;
+}
+.thirdblock_inner h4::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    left: -4.5%;
+    top: 40%;
+    background-color: #777777;
+}
+
+.thirdblock_inner h3 {
+    margin-bottom: 47px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #177165;
+}
+
+
+.thirdblock_inner div {
+    min-height: 805px;
+    display: flex;
+
+}
+
+.thirdblock_inner div div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 118px;
+}
+
+.thirdblock_inner div h2 {
+    margin-bottom: 23px;
+    margin-top: 4px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 35px;
+    color: #177165;
+}
+
+.thirdblock_inner div h4 {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+.thirdblock_inner div h4::before {
+    display: none;
+}
+
+.thirdblock_inner div h3 {
+    margin-bottom: 33px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    color: #177165;
+}
+
+.thirdblock_inner div h4:nth-child(6) {
+    margin-bottom: 86px;
+}
+
+.thirdblock_inner div a {
+    padding: 10px 64px 8px 56px;
+    border: 2px solid #177165;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #177165;
+}
+.thirdblock_inner div a::after {
+    content: '+';
+    position: absolute;
+    right: 20%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #177165;
+}
