@@ -327,3 +327,115 @@ header div h2:nth-child(2) {
     line-height: 26px;
     color: #177165;
 }
+
+.fourthblock {
+    min-height: 882px;
+    display: flex;
+    align-items: center;
+}
+.fourthblock::before {
+    content: '';
+    min-width: 100%;
+    min-height: 882px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: #E1F4F2;
+}
+
+.fourthblock_inner {
+    margin-left: 80px;
+}
+
+.fourthblock_inner h4 {
+    margin-bottom: 10px;
+    margin-left: 50px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    color: #777777;
+}
+.fourthblock_inner h4::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    left: -4.5%;
+    top: 50%;
+    background: #777777;
+}
+
+
+.fourthblock_inner h3 {
+    margin-bottom: 49px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #177165;
+}
+
+
+.fourthblock_inner div {
+    display: flex;
+}
+
+.fourthblock_inner div div {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.fourthblock_inner div div:last-child {
+    margin-right: 0px;
+}
+
+.fourthblock_inner div img {
+    margin-bottom: 30px;
+}
+
+.fourthblock_inner div h4 {
+    margin-left: 0;
+    margin-bottom: 3px;
+}
+.fourthblock_inner div h4::before {
+    display: none;
+}
+
+.fourthblock_inner div h3 {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+    color: #177165;
+}
+
+.fourthblock_inner a {
+    margin-left: 40%;
+    padding: 8px 58px 10px 58px;
+    border: 2px solid #177165;
+    position: relative;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #177165;
+}
+.fourthblock_inner a::after {
+    content: '+';
+    position: absolute;
+    right: 20%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #177165;
+}
