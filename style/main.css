@@ -803,3 +803,105 @@ header div h2:nth-child(2) {
     height: 70px;
     width: 206px;
 }
+
+.tenthblock {
+    display: flex;
+    align-items: center;
+    min-height: 802px;
+    margin-bottom: 100px;
+}
+.tenthblock::before {
+    content: '';
+    min-width: 100%;
+    min-height: 802px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: #E1F4F2;
+}
+
+.tenthblock_inner {
+    margin-left: 80px;
+    padding-top: 24px;
+}
+
+.tenthblock_inner h4 {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #777777;
+}
+.tenthblock_inner h4::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    left: -6.5%;
+    top: 50%;
+    background: #777777; 
+}
+
+.tenthblock_inner h2 {
+    margin-bottom: 52px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #177165;
+}
+
+.tenthblock_inner div {
+
+    width: 540px;
+    height: 451px;
+    padding-top: 60px;
+    padding-left: 60px;
+    background: #ffffff;
+    margin-left: 206px;
+}
+
+.tenthblock_inner h1 {
+    margin-bottom: 51px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 42,25px;
+    color: #177165;
+}
+
+.tenthblock_inner h3 {
+    margin-bottom: 72px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    color: #177165;
+}
+.tenthblock_inner h5 {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    color: #777777;
+}
+.tenthblock_inner h5::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    left: -11.5%;
+    top: 50%;
+    background: #777777; 
+}
