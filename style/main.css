@@ -1034,3 +1034,28 @@ header div h2:nth-child(2) {
     line-height: 26px;
     color: #177165;
 }
+
+.twelvethblock {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+}
+.twelvethblock::before {
+    content: '';
+    min-width: 100%;
+    min-height: 320px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: #E1F4F2;
+}
+
+.twelvethblock_inner {
+    margin-left: 136px;
+    display: flex;
+}
+
+.twelvethblock_inner img {
+    margin-right: 114px;
+}
