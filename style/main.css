@@ -634,3 +634,120 @@ header div h2:nth-child(2) {
     line-height: 26px;
     color: #777777;
 }
+
+.seventhblock {
+    min-height: 415px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.seventhblock::before {
+    content: '';
+    min-width: 100%;
+    min-height: 415px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: #177165;
+}
+
+
+.seventhblock_inner {
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.seventhblock_inner h4 {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    color: #A4D6CF;
+}
+.seventhblock_inner h4::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    top: 45%;
+    left: -10%;
+    background: #A4D6CF;
+}
+
+
+.seventhblock_inner h3 {
+    margin-right: 94px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
+
+.eighthblock {
+    margin-bottom: 100px;
+}
+
+
+.eighthblock_inner {
+    max-width: 1140px;
+    margin-left: 80px;
+    display: flex;
+    background: #E1F4F2;
+}
+
+
+.eighthblock_inner div {
+    min-width: 285px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.eighthblock_inner div::after {
+    content: '';
+    min-width: 4px;
+    min-height: 7px;
+    position: absolute;
+    right: 0;
+    background: #177165;
+}
+.eighthblock_inner div:last-child::after {display: none;}
+
+
+.eighthblock_inner h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 73px;
+    color: #177165;
+}
+
+.eighthblock_inner h4 {
+    margin-left: 50px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    color: #777777;
+}
+.eighthblock_inner h4::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    left: -50%;
+    top: 45%;
+    background: #777777;
+}
