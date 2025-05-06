@@ -1059,3 +1059,155 @@ header div h2:nth-child(2) {
 .twelvethblock_inner img {
     margin-right: 114px;
 }
+
+.thirteenblock {
+    min-height: 684px;
+}
+.thirteenblock::before {
+    content: '';
+    min-width: 100%;
+    min-height: 665px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: #177165;
+}
+
+.thirteenblock_inner {
+    margin-left: 82px;
+    padding-top: 100px;
+    min-width: 1160px;
+    min-height: 465px;
+    display: flex;
+}
+
+.thirteenblock_inner ul {
+    margin-right: 80px;
+    margin-top: 64px;
+}
+
+.thirteenblock_inner h2 {
+    margin-bottom: 40px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.thirteenblock_inner li {
+    margin-left: 30px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 52px;
+    color: #FFFFFF;
+}
+.thirteenblock_inner li::before {
+    content: '';
+    min-width: 7px;
+    min-height: 9px;
+    position: absolute;
+    left: -30%;
+    top: 40%;
+    background-image: url('./img/twelvethblock/arrows.png');
+}
+
+.thirteenblock_inner ul:nth-child(2) li::before {
+    left: -22%;
+}
+.thirteenblock_inner ul:nth-child(3) li::before {
+    left: -40%;
+}
+
+
+.thirteenblock_inner div {
+    min-width: 463px;
+    min-height: 465px;
+    padding-top: 70px;
+    padding-left: 70px;
+    background: #23786D;
+    margin-left: 85px;  
+}
+
+.thirteenblock_inner div img {
+    margin-bottom: 88px;
+}
+
+.thirteenblock_inner h3 {
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.thirteenblock_inner h4:nth-child(3) {
+    margin-left: 80px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    color: #A4D6CF;
+}
+.thirteenblock_inner h4:nth-child(3)::before {
+    content: '';
+    min-width: 44px;
+    min-height: 44px;
+    position: absolute;
+    left: -24%;
+    top: 33%;
+    background-image: url('./phone.png');
+}
+
+.thirteenblock_inner h4:nth-child(4) {
+    margin-left: 80px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.fourthteen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fourthteen::before {
+    content: '';
+    min-width: 100%;
+    min-height: 66px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: #0A312C;
+}
+
+.fourthteen h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.fourthteen span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #A4D6CF;
+}
