@@ -751,3 +751,55 @@ header div h2:nth-child(2) {
     top: 45%;
     background: #777777;
 }
+
+.ninethblock {
+    margin-bottom: 100px;
+}
+
+.ninethblock_inner {
+    margin-left: 80px;
+    margin-bottom: 40px;
+    max-width: 1140px;
+    min-height: 530px;
+    position: relative;
+    background-image: url('./bg.png');
+}
+
+.ninethblock_inner div {
+    min-width: 266px;
+    min-height: 333px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    background: #177165;
+}
+
+
+.ninethblock_inner li {
+    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #A4D6CF;
+}
+.ninethblock_inner h2 {
+    margin-bottom: 20px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+
+.ninethblock img {
+    margin-left: 80px;
+    height: 70px;
+    width: 206px;
+}
