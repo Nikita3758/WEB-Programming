@@ -533,3 +533,104 @@ header div h2:nth-child(2) {
     background-color: #23786D;
     background-image: url('./phone.png');
 }
+
+.sixthblock {
+    min-height: 1111px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.sixthblock::before {
+    content: '';
+    min-width: 503px;
+    min-height: 850px;
+    position: absolute;
+    left: -6%;
+    top: 0;
+    z-index: -1;
+    background: rgba(225, 244, 242, 0.8);
+}
+
+.sixthblock_inner {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sixthblock_inner h4 {
+    margin-bottom: 11px;
+    margin-left: 530px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    color: #777777;
+}
+.sixthblock_inner h4::before {
+    content: '';
+    min-width: 40px;
+    min-height: 1px;
+    position: absolute;
+    left: -8%;
+    top: 40%;
+    background-color: #777777;
+}
+
+.sixthblock_inner h2 {
+    margin-left: 483px;
+    margin-bottom: 51px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #177165;
+}
+
+
+.sixthblock_inner div {
+    display: flex;
+}
+
+
+
+.sixthblock_inner div div {
+    max-width: 347px;
+    min-height: 528px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sixthblock_inner div h4 {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.sixthblock_inner div h4::before {
+    left: -17%;
+}
+
+
+.sixthblock_inner div h2 {
+    margin-left: 0;
+    margin-bottom: 18px;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 42px;
+    color: #177165;
+}
+
+.sixthblock_inner div h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #777777;
+}
