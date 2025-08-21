@@ -5,318 +5,369 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
-    <title>Document</title>
+    <title>Farmzi - Gardening & Landscaping Services</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="firstblock container">
-            <header>
-                <img src="./img/header/logo.png" alt="Logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <div>
+        <header class="firstblock container">
+            <div class="header-content">
+                <img src="./img/header/logo.png" alt="Farmzi Logo" class="logo">
+
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
                     <h2>Call us:</h2>
                     <h2>+00 89 458 648</h2>
                 </div>
-            </header>
-        </div>
-        <div class="secondblock container">
-            <div>
-                <h4>Make a garden with musion.</h4>
-                <h2>
-                    If you have a <br />
-                    garden and a <br />
-                    library, you have <br />
-                    everything you <br />
+            </div>
+        </header>
+
+        <section class="secondblock container">
+            <div class="hero-content">
+                <h4 class="section-subtitle">Make a garden with musion.</h4>
+                <h2 class="hero-title">
+                    If you have a <br class="desktop-only">
+                    garden and a <br class="desktop-only">
+                    library, you have <br class="desktop-only">
+                    everything you <br class="desktop-only">
                     need.
                 </h2>
-                <h4>Marcus Tullius Cicero</h4>
-                <a href="#">All services</a>
+                <h4 class="quote-author">— Marcus Tullius Cicero</h4>
+                <a href="#" class="cta-button">All Services</a>
             </div>
-            <img src="./img/secondblock/img.png" alt="Watering flowers">
-        </div>
-        <div class="thirdblock container">
+            <img src="./img/secondblock/img.png" alt="Watering flowers in garden" class="hero-image">
+        </section>
+
+        <section class="thirdblock container">
             <div class="thirdblock_inner">
-                <h4>About Company</h4>
-                <h3>
-                    Farmzi have 35 years of experience and know <br />
-                    smart way to grow and design your beautiful <br />
+                <h4 class="section-subtitle">— About Company</h4>
+                <h3 class="section-title">
+                    Farmzi have 35 years of experience and know 
+                    smart way to grow and design your beautiful 
                     garden.
                 </h3>
-                <div>
-                    <img src="./img/thirdblock/img.png" alt="Taking care of the garden">
-                    <div>
+                <div class="about-content">
+                    <img src="./img/thirdblock/img.png" alt="Gardener taking care of plants" class="about-image">
+                    <div class="about-text">
                         <h2>Who we are?</h2>
-                        <h4>
-                            Lorem Ipsum is simply dummy text of the printing and <br />
-                            typeset industry. Lorem Ipsum has been the industry's <br />
-                            standard dumm ever since the 1500s, when an unknown <br />
+                        <p class="description">
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typeset industry. Lorem Ipsum has been the industry's 
+                            standard dumm ever since the 1500s, when an unknown 
                             printer took a galley scrambled it make a type specimen book.
-                        </h4>
-                        <h3>
-                            “Lorem Ipsum is simply dummy text of the <br />
-                            printn industry lorem epsum has been the <br />
-                            industry and scrambled it make a type <br />
-                            specimen book”.
-                        </h3>
+                        </p>
+                        <blockquote class="quote">
+                            "Lorem Ipsum is simply dummy text of the 
+                            printn industry lorem epsum has been the 
+                            industry and scrambled it make a type 
+                            specimen book".
+                        </blockquote>
                         <h2>Mission and vision</h2>
-                        <h4>
-                            Lorem Ipsum is simply dummy text of the printing and <br />
-                            typeset industry. Lorem Ipsum has been the industry's <br />
-                            standard dumm ever since the 1500s, when an unknown <br />
+                        <p class="description">
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typeset industry. Lorem Ipsum has been the industry's 
+                            standard dumm ever since the 1500s, when an unknown 
                             printer took a galley scrambled it make a type specimen book.
-                        </h4>
-                        <h4>
-                            Lorem Ipsum is simply dummy text of the printing and <br />
-                            typeset industry. Lorem Ipsum has been the industry's <br />
+                        </p>
+                        <p class="description">
+                            Lorem Ipsum is simply dummy text of the printing and 
+                            typeset industry. Lorem Ipsum has been the industry's 
                             standard dumm scrambled it make a type specimen book.
-                        </h4>
-                        <a href="#">Learn More</a>
+                        </p>
+                        <a href="#" class="learn-more-btn">Learn More</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="fourthblock container">
+        </section>
+
+        <section class="fourthblock container">
             <div class="fourthblock_inner">
-                <h4>Our Services</h4>
-                <h3>
-                    Farmzi always provide amazing gardening and <br />
+                <h4 class="section-subtitle">— Our Services</h4>
+                <h3 class="section-title">
+                    Farmzi always provide amazing gardening and 
                     landscaping services.
                 </h3>
-                <div>
-                    <div>
-                        <img src="./img/fourthblock/firstimg.png" alt="Build">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <img src="./img/fourthblock/firstimg.png" alt="Flower planting service">
                         <h4>Flower</h4>
                         <h3>Planting Flower</h3>
                     </div>
-                    <div>
-                        <img src="./img/fourthblock/secondimg.png" alt="Build">
+                    <div class="service-item">
+                        <img src="./img/fourthblock/secondimg.png" alt="Tree planting service">
                         <h4>Planting</h4>
                         <h3>Tree Planting</h3>
                     </div>
-                    <div>
-                        <img src="./img/fourthblock/thirdimg.png" alt="Build">
+                    <div class="service-item">
+                        <img src="./img/fourthblock/thirdimg.png" alt="Rush removal service">
                         <h4>Rush</h4>
                         <h3>Rush Removal</h3>
                     </div>
-                    <div>
-                        <img src="./img/fourthblock/fourthimg.png" alt="Build">
+                    <div class="service-item">
+                        <img src="./img/fourthblock/fourthimg.png" alt="Garden watering service">
                         <h4>Watering</h4>
                         <h3>Garden Watering</h3>
                     </div>
                 </div>
-                <a href="#">More service</a>
+                <a href="#" class="more-services-btn">More Service</a>
             </div>
-        </div>
-        <div class="fifthblock container">
+        </section>
+
+        <section class="fifthblock container">
             <div class="fifthblock_inner">
-                <h4>Call To Action</h4>
-                <h3>
-                    If you need any gardening <br />
-                    service, you can contact with <br />
+                <h4 class="section-subtitle">— Call To Action</h4>
+                <h3 class="cta-title">
+                    If you need any gardening 
+                    service, you can contact with 
                     Farmzi.
                 </h3>
-                <div>
+                <div class="contact-box">
                     <h4>Our Services</h4>
                     <h4>+00 89 458 648</h4>
                 </div>
             </div>
-        </div>
-        <div class="sixthblock container">
+        </section>
+
+        <section class="sixthblock container">
             <div class="sixthblock_inner">
-                <h4>Team Members</h4>
-                <h2>
-                    Farmzi feel proud for skilled <br />
+                <h4 class="section-subtitle">— Team Members</h4>
+                <h2 class="section-title">
+                    Farmzi feel proud for skilled 
                     team members.
                 </h2>
-                <div>
-                    <div>
-                        <img src="./img/sixthblock/firstimg.png" alt="Shoshana Horsley">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="./img/sixthblock/firstimg.png" alt="Shoshana Horsley - Founder">
                         <h4>Founder of Farmzi</h4>
                         <h2>Shoshana Horsley</h2>
-                        <h3>
-                            Lorem Ipsum is simply dummy text of the <br />
+                        <p class="member-description">
+                            Lorem Ipsum is simply dummy text of the 
                             printing and industry has been the indust.
-                        </h3>
+                        </p>
                     </div>
-                    <div>
-                        <img src="./img/sixthblock/secondimg.png" alt="Kristofer Pennell">
+                    <div class="team-member">
+                        <img src="./img/sixthblock/secondimg.png" alt="Kristofer Pennell - Senior Gardener">
                         <h4>Senior Gardener</h4>
                         <h2>Kristofer Pennell</h2>
-                        <h3>
-                            It is a long established fact that a reader <br />
+                        <p class="member-description">
+                            It is a long established fact that a reader 
                             will distracted the readable content.
-                        </h3>
+                        </p>
                     </div>
-                    <div>
-                        <img src="./img/sixthblock/thirdimg.png" alt="Matthew Jackson">
+                    <div class="team-member">
+                        <img src="./img/sixthblock/thirdimg.png" alt="Matthew Jackson - Garden Designer">
                         <h4>Garden Designer</h4>
                         <h2>Matthew Jackson</h2>
-                        <h3>
-                            There are many variations of passages of <br />
+                        <p class="member-description">
+                            There are many variations of passages of 
                             Lorem Ipsum available, but the majority
-                        </h3>
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="seventhblock container">
+        </section>
+
+        <section class="seventhblock container">
             <div class="seventhblock_inner">
-                <div>
-                    <h4>Company intro video</h4>
-                    <h3>
-                        See our intro video and <br />
-                        lets start your dream <br />
+                <div class="video-content">
+                    <h4 class="section-subtitle">— Company intro video</h4>
+                    <h3 class="video-title">
+                        See our intro video and 
+                        lets start your dream 
                         project.
                     </h3>
                 </div>
-                <img src="./img/seventhblock/img.png" alt="Leaves">
+                <img src="./img/seventhblock/img.png" alt="Green leaves background" class="video-bg">
             </div>
-        </div>
-        <div class="eighthblock container">
+        </section>
+
+        <section class="eighthblock container">
             <div class="eighthblock_inner">
-                <div>
+                <div class="stat-item">
                     <h2>847 +</h2>
-                    <h4>Project Done</h4>
+                    <h4>— Project Done</h4>
                 </div>
-                <div>
+                <div class="stat-item">
                     <h2>753 +</h2>
-                    <h4>Happy Client</h4>
+                    <h4>— Happy Client</h4>
                 </div>
-                <div>
+                <div class="stat-item">
                     <h2>284 +</h2>
-                    <h4>Team Member</h4>
+                    <h4>— Team Member</h4>
                 </div>
-                <div>
+                <div class="stat-item">
                     <h2>98 +</h2>
-                    <h4>Winning Award</h4>
+                    <h4>— Winning Award</h4>
                 </div>
             </div>
-        </div>
-        <div class="ninethblock container">
+        </section>
+
+        <section class="ninethblock container">
             <div class="ninethblock_inner">
-                <div>
-                    <ul>
-                        <li>Project:</li>
-                        <h2>Farm Design</h2>
-                        <li>Client:</li>
-                        <h2>Alex Milan</h2>
-                        <li>Location:</li>
-                        <h2>Mississippi, USA</h2>
+                <div class="project-info">
+                    <ul class="project-details">
+                        <li><span class="detail-label">Project:</span> Farm Design</li>
+                        <li><span class="detail-label">Client:</span> Alex Milan</li>
+                        <li><span class="detail-label">Location:</span> Mississippi, USA</li>
                     </ul>
                 </div>
             </div>
-            <img src="./img/ninethblock/arrows.png" alt="Arrows">
-        </div>
-        <div class="tenthblock container">
+            <div class="navigation-controls">
+                <img src="./img/ninethblock/arrows.png" alt="Navigation arrows" class="navigation-arrows">
+            </div>
+        </section>
+
+        <section class="tenthblock container">
             <div class="tenthblock_inner">
-                <h4>Happy Clients</h4>
-                <h2>Farmzi got best feedback from happy clients</h2>
-                <div>
-                    <h3>“Lorem Ipsum is simply dummy text the <br> 
-                        printing and typesetting industry. Lorem <br>
-                        has been the industry's standard dummy <br>
-                        text since the 1500 when an unknown <br>
-                        printer took galley type and scram bled it <br>
-                        make a type specimen book</h3>
-                    <h5>Designer of Musion</h5>
-                    <h1>Rachel Patterson</h1>
+                <h4 class="section-subtitle">— Happy Clients</h4>
+                <h2 class="section-title">Farmzi got best feedback from happy clients</h2>
+                <div class="testimonial">
+                    <blockquote class="testimonial-text">
+                        "Lorem Ipsum is simply dummy text the 
+                        printing and typesetting industry. Lorem 
+                        has been the industry's standard dummy 
+                        text since the 1500 when an unknown 
+                        printer took galley type and scram bled it 
+                        make a type specimen book"
+                    </blockquote>
+                    <div class="client-info">
+                        <h5 class="client-role">— Designer of Musion</h5>
+                        <h3 class="client-name">Rachel Patterson</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="eleventhblock container">
+        </section>
+
+        <section class="eleventhblock container">
             <div class="eleventhblock_inner">
-                <h4>Latest News</h4>
-                <h2>
-                    Check now latest tips and tricks of gardening and <br />
+                <h4 class="section-subtitle">— Latest News</h4>
+                <h2 class="section-title">
+                    Check now latest tips and tricks of gardening and 
                     landscaping from blog.
                 </h2>
-                <div class="eleventhblock_inner_info">
-                    <div>
-                        <img src="./img/eleventhblock/firstimg.png" alt="Radish">
-                        <div>
-                            <h4>Date: <span>March 23, 2022</span> By: <span>Kristofer Pennell</span></h4>
-                            <h2>
-                                If You're Not Getting Your Garden <br />
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <img src="./img/eleventhblock/firstimg.png" alt="Garden harvesting tips">
+                        <div class="post-content">
+                            <p class="post-meta">Date: <span>March 23, 2022</span> By: <span>Kristofer Pennell</span></p>
+                            <h2 class="post-title">
+                                If You're Not Getting Your Garden 
                                 Harvested Things!
                             </h2>
-                            <h3>
-                                Lorem Ipsum is simply dummy text the printing and <br />
+                            <p class="post-excerpt">
+                                Lorem Ipsum is simply dummy text the printing and 
                                 tpesetting industry. Lorem industry's standard dummy.
-                            </h3>
-                            <a href="#">Read more</a>
+                            </p>
+                            <a href="#" class="read-more-btn">Read More</a>
                         </div>
-                    </div>
-                    <div>
-                        <img src="./img/eleventhblock/secondimg.png" alt="Radish">
-                        <div>
-                            <h4>Date: <span>March 23, 2022</span> By: <span>Kristofer Pennell</span></h4>
-                            <h2>
-                                How to Plant Flowers with a Success Rate <br />
+                    </article>
+                    <article class="blog-post">
+                        <img src="./img/eleventhblock/secondimg.png" alt="Flower planting guide">
+                        <div class="post-content">
+                            <p class="post-meta">Date: <span>March 23, 2022</span> By: <span>Kristofer Pennell</span></p>
+                            <h2 class="post-title">
+                                How to Plant Flowers with a Success Rate 
                                 of 90% or Higher!
                             </h2>
-                            <h3>
-                                Lorem Ipsum is simply dummy text the printing and <br />
+                            <p class="post-excerpt">
+                                Lorem Ipsum is simply dummy text the printing and 
                                 tpesetting industry. Lorem industry's standard dummy.
-                            </h3>
-                            <a href="#">Read more</a>
+                            </p>
+                            <a href="#" class="read-more-btn">Read More</a>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="twelvethblock container">
+            <div class="twelvethblock_inner">
+                <img src="./img/twelvethblock/firstimg.png" alt="Client logo 1" class="client-logo">
+                <img src="./img/twelvethblock/secondimg.png" alt="Client logo 2" class="client-logo">
+                <img src="./img/twelvethblock/thirdimg.png" alt="Client logo 3" class="client-logo">
+                <img src="./img/twelvethblock/fourthimg.png" alt="Client logo 4" class="client-logo">
+                <img src="./img/twelvethblock/fifthimg.png" alt="Client logo 5" class="client-logo">
+            </div>
+        </section>
+
+        <footer class="thirteenblock container">
+            <div class="thirteenblock_inner">
+                <div class="footer-section">
+                    <h2>Explore</h2>
+                    <ul>
+                        <li>About us</li>
+                        <li>FAQ</li>
+                        <li>Press & Blog</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Information</h2>
+                    <ul>
+                        <li>Style Guide</li>
+                        <li>Change Log</li>
+                        <li>License</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Service</h2>
+                    <ul>
+                        <li>Flower</li>
+                        <li>Planting</li>
+                        <li>Watering</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <img src="./img/header/logo.png" alt="Farmzi Logo" class="footer-logo">
+                    <p class="footer-description">
+                        Lorem Ipsum is simply dummy text of the 
+                        printing and typeset industry has been 
+                        the industry's standard.
+                    </p>
+                    <div class="footer-phone">
+                        <h4>Call us:</h4>
+                        <h4>+00 89 458 648</h4>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="twelvethblock container">
-            <div class="twelvethblock_inner">
-                <img src="./img/twelvethblock/firstimg.png" alt="firstimg">
-                <img src="./img/twelvethblock/secondimg.png" alt="secondimg">
-                <img src="./img/twelvethblock/thirdimg.png" alt="thirdimg">
-                <img src="./img/twelvethblock/fourthimg.png" alt="fourthimg">
-                <img src="./img/twelvethblock/fifthimg.png" alt="fifthimg">
-            </div>
-        </div>
-        <div class="thirteenblock container">
-            <div class="thirteenblock_inner">
-                <ul>
-                    <h2>Explore</h2>
+        </footer>
 
-                    <li>About us</li>
-                    <li>FAQ</li>
-                    <li>Press & Blog</li>
-                </ul>
-                <ul>
-                    <h2>Information</h2>
-
-                    <li>Style Guide</li>
-                    <li>Change Log</li>
-                    <li>License</li>
-                </ul>
-                <ul>
-                    <h2>Service</h2>
-
-                    <li>Flower</li>
-                    <li>Planting</li>
-                    <li>Watering</li>
-                </ul>
-                <div>
-                    <img src="./img/header/logo.png" alt="Logo">
-                    <h3>
-                        Lorem Ipsum is simply dummy text of the <br />
-                        printing and typeset industry has been <br />
-                        the industry's standard.
-                    </h3>
-                    <h4>Call us:</h4>
-                    <h4>+00 89 458 648</h4>
-                </div>
-            </div>
-        </div>
         <div class="fourthteen container">
-            <h2>© 2022 design and developed by <span>Brandbes</span>. Powered by <span>Webflow</span></h2>
+            <p>© 2022 design and developed by <span>Brandbes</span>. Powered by <span>Webflow</span></p>
         </div>
     </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('.nav');
+            
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
