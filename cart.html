@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmzi - Корзина</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/cart.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="firstblock container">
+            <div class="header-content">
+                <img src="./img/header/logo.png" alt="Farmzi Logo" class="logo">
+
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <h2>Call us:</h2>
+                    <h2>+00 89 458 648</h2>
+                </div>
+            </div>
+        </header>
+
+        <section class="cart-container">
+            <h2 class="section-title">Корзина покупок</h2>
+            
+            <div class="cart-items" id="cartItems"></div>
+            
+            <div class="cart-summary" id="cartSummary">
+                <div class="summary-row">
+                    <span>Промежуточный итог:</span>
+                    <span id="subtotal">0 руб.</span>
+                </div>
+                <div class="summary-row">
+                    <span>Доставка:</span>
+                    <span>Бесплатно</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Итого:</span>
+                    <span id="total">0 руб.</span>
+                </div>
+            </div>
+            
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </section>
+
+        <footer class="thirteenblock container">
+            <div class="thirteenblock_inner">
+                <div class="footer-section">
+                    <h2>Explore</h2>
+                    <ul>
+                        <li>About us</li>
+                        <li>FAQ</li>
+                        <li>Press & Blog</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Information</h2>
+                    <ul>
+                        <li>Style Guide</li>
+                        <li>Change Log</li>
+                        <li>License</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2>Service</h2>
+                    <ul>
+                        <li>Flower</li>
+                        <li>Planting</li>
+                        <li>Watering</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <img src="./img/header/logo.png" alt="Farmzi Logo" class="footer-logo">
+                    <p class="footer-description">
+                        Lorem Ipsum is simply dummy text of the 
+                        printing and typeset industry has been 
+                        the industry's standard.
+                    </p>
+                    <div class="footer-phone">
+                        <h4>Call us:</h4>
+                        <h4>+00 89 458 648</h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="fourthteen container">
+            <p>© 2022 design and developed by <span>Brandbes</span>. Powered by <span>Webflow</span></p>
+        </div>
+    </div>
+
+    <script src="./js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Посадка цветов",
+      "category": "Посадка",
+      "price": 2500,
+      "rating": 4.8,
+      "description": "Профессиональная посадка цветов с подбором оптимальных сортов для вашего сада",
+      "image": "./img/fourthblock/firstimg.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "2-4 часа",
+        "area": "до 10 м²",
+        "complexity": "Средняя"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Посадка деревьев",
+      "category": "Посадка",
+      "price": 5500,
+      "rating": 4.9,
+      "description": "Посадка декоративных и плодовых деревьев с гарантией приживаемости",
+      "image": "./img/fourthblock/secondimg.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "3-5 часов",
+        "area": "1 дерево",
+        "complexity": "Высокая"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Удаление сорняков",
+      "category": "Уход",
+      "price": 1800,
+      "rating": 4.7,
+      "description": "Тщательное удаление сорняков с обработкой территории для предотвращения их повторного появления",
+      "image": "./img/fourthblock/thirdimg.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "1-3 часа",
+        "area": "до 15 м²",
+        "complexity": "Низкая"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Полив сада",
+      "category": "Уход",
+      "price": 1200,
+      "rating": 4.5,
+      "description": "Автоматический или ручной полив вашего сада с учетом потребностей растений",
+      "image": "./img/fourthblock/fourthimg.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "1-2 часа",
+        "area": "до 20 м²",
+        "complexity": "Низкая"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Ландшафтный дизайн",
+      "category": "Дизайн",
+      "price": 15000,
+      "rating": 4.9,
+      "description": "Разработка индивидуального дизайна вашего участка с учетом всех пожеланий",
+      "image": "./img/services/design.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "5-10 дней",
+        "area": "любая",
+        "complexity": "Высокая"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Установка системы полива",
+      "category": "Обустройство",
+      "price": 12000,
+      "rating": 4.8,
+      "description": "Монтаж автоматической системы полива с таймером и регулировкой интенсивности",
+      "image": "./img/services/irrigation.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "1-2 дня",
+        "area": "до 50 м²",
+        "complexity": "Высокая"
+      }
+    },
+    {
+      "id": "7",
+      "name": "Стрижка газона",
+      "category": "Уход",
+      "price": 2000,
+      "rating": 4.6,
+      "description": "Аккуратная стрижка газона с удалением скошенной травы и выравниванием кромок",
+      "image": "./img/services/lawn.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "1-2 часа",
+        "area": "до 30 м²",
+        "complexity": "Низкая"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Удобрение почвы",
+      "category": "Уход",
+      "price": 3000,
+      "rating": 4.7,
+      "description": "Внесение органических и минеральных удобрений для улучшения качества почвы",
+      "image": "./img/services/fertilize.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "2-3 часа",
+        "area": "до 25 м²",
+        "complexity": "Средняя"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Установка садовых дорожек",
+      "category": "Обустройство",
+      "price": 8000,
+      "rating": 4.8,
+      "description": "Создание красивых и функциональных садовых дорожек из различных материалов",
+      "image": "./img/services/path.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "2-3 дня",
+        "area": "10-15 м",
+        "complexity": "Высокая"
+      }
+    },
+    {
+      "id": "10",
+      "name": "Обрезка деревьев",
+      "category": "Уход",
+      "price": 4000,
+      "rating": 4.7,
+      "description": "Профессиональная обрезка деревьев для улучшения их здоровья и внешнего вида",
+      "image": "./img/services/pruning.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "2-4 часа",
+        "area": "3-5 деревьев",
+        "complexity": "Средняя"
+      }
+    },
+    {
+      "id": "11",
+      "name": "Создание альпийской горки",
+      "category": "Дизайн",
+      "price": 10000,
+      "rating": 4.9,
+      "description": "Создание красивой альпийской горки с подбором камней и растений",
+      "image": "./img/services/rockery.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "3-5 дней",
+        "area": "5-10 м²",
+        "complexity": "Высокая"
+      }
+    },
+    {
+      "id": "12",
+      "name": "Установка теплицы",
+      "category": "Обустройство",
+      "price": 15000,
+      "rating": 4.8,
+      "description": "Сборка и установка теплицы различных размеров и конфигураций",
+      "image": "./img/services/greenhouse.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "1-2 дня",
+        "area": "6-12 м²",
+        "complexity": "Высокая"
+      }
+    },
+    {
+      "id": "13",
+      "name": "Осенняя уборка",
+      "category": "Уход",
+      "price": 3500,
+      "rating": 4.6,
+      "description": "Комплексная уборка территории от листьев и подготовка сада к зиме",
+      "image": "./img/services/autumn.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "2-4 часа",
+        "area": "до 30 м²",
+        "complexity": "Средняя"
+      }
+    },
+    {
+      "id": "14",
+      "name": "Весенняя подготовка",
+      "category": "Уход",
+      "price": 4000,
+      "rating": 4.7,
+      "description": "Комплекс работ по подготовке сада к новому сезону после зимы",
+      "image": "./img/services/spring.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "3-5 часов",
+        "area": "до 30 м²",
+        "complexity": "Средняя"
+      }
+    },
+    {
+      "id": "15",
+      "name": "Установка садового освещения",
+      "category": "Обустройство",
+      "price": 9000,
+      "rating": 4.8,
+      "description": "Монтаж системы садового освещения для создания уютной атмосферы в вечернее время",
+      "image": "./img/services/lighting.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "1-2 дня",
+        "area": "весь участок",
+        "complexity": "Высокая"
+      }
+    }
+  ],
+  "favorites": [],
+  "cart": []
+}
