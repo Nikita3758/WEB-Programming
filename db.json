@@ -11,7 +11,11 @@
       "rating": 4.8,
       "popularity": 95,
       "inStock": true,
-      "tags": ["planting", "flowers", "garden"]
+      "tags": [
+        "planting",
+        "flowers",
+        "garden"
+      ]
     },
     {
       "id": 2,
@@ -24,7 +28,11 @@
       "rating": 4.9,
       "popularity": 92,
       "inStock": true,
-      "tags": ["planting", "trees", "landscaping"]
+      "tags": [
+        "planting",
+        "trees",
+        "landscaping"
+      ]
     },
     {
       "id": 3,
@@ -37,7 +45,11 @@
       "rating": 4.7,
       "popularity": 88,
       "inStock": true,
-      "tags": ["maintenance", "cleaning", "garden"]
+      "tags": [
+        "maintenance",
+        "cleaning",
+        "garden"
+      ]
     },
     {
       "id": 4,
@@ -50,7 +62,11 @@
       "rating": 4.8,
       "popularity": 90,
       "inStock": true,
-      "tags": ["irrigation", "system", "automation"]
+      "tags": [
+        "irrigation",
+        "system",
+        "automation"
+      ]
     },
     {
       "id": 5,
@@ -63,7 +79,11 @@
       "rating": 4.6,
       "popularity": 85,
       "inStock": true,
-      "tags": ["lawn", "care", "maintenance"]
+      "tags": [
+        "lawn",
+        "care",
+        "maintenance"
+      ]
     },
     {
       "id": 6,
@@ -76,7 +96,11 @@
       "rating": 4.9,
       "popularity": 96,
       "inStock": true,
-      "tags": ["design", "consultation", "planning"]
+      "tags": [
+        "design",
+        "consultation",
+        "planning"
+      ]
     },
     {
       "id": 7,
@@ -89,7 +113,11 @@
       "rating": 4.7,
       "popularity": 87,
       "inStock": true,
-      "tags": ["planting", "seasonal", "rotation"]
+      "tags": [
+        "planting",
+        "seasonal",
+        "rotation"
+      ]
     },
     {
       "id": 8,
@@ -102,7 +130,11 @@
       "rating": 4.8,
       "popularity": 89,
       "inStock": true,
-      "tags": ["fertilization", "organic", "soil"]
+      "tags": [
+        "fertilization",
+        "organic",
+        "soil"
+      ]
     },
     {
       "id": 9,
@@ -115,7 +147,11 @@
       "rating": 4.7,
       "popularity": 84,
       "inStock": true,
-      "tags": ["pruning", "hedge", "trimming"]
+      "tags": [
+        "pruning",
+        "hedge",
+        "trimming"
+      ]
     },
     {
       "id": 10,
@@ -128,7 +164,11 @@
       "rating": 4.6,
       "popularity": 86,
       "inStock": true,
-      "tags": ["pest", "control", "protection"]
+      "tags": [
+        "pest",
+        "control",
+        "protection"
+      ]
     },
     {
       "id": 11,
@@ -141,7 +181,11 @@
       "rating": 4.9,
       "popularity": 93,
       "inStock": true,
-      "tags": ["lighting", "installation", "design"]
+      "tags": [
+        "lighting",
+        "installation",
+        "design"
+      ]
     },
     {
       "id": 12,
@@ -154,7 +198,11 @@
       "rating": 4.7,
       "popularity": 82,
       "inStock": true,
-      "tags": ["pottery", "container", "design"]
+      "tags": [
+        "pottery",
+        "container",
+        "design"
+      ]
     },
     {
       "id": 13,
@@ -167,7 +215,11 @@
       "rating": 4.8,
       "popularity": 91,
       "inStock": true,
-      "tags": ["vegetable", "garden", "setup"]
+      "tags": [
+        "vegetable",
+        "garden",
+        "setup"
+      ]
     },
     {
       "id": 14,
@@ -180,7 +232,11 @@
       "rating": 4.9,
       "popularity": 94,
       "inStock": true,
-      "tags": ["pathway", "installation", "hardscaping"]
+      "tags": [
+        "pathway",
+        "installation",
+        "hardscaping"
+      ]
     },
     {
       "id": 15,
@@ -193,9 +249,93 @@
       "rating": 4.9,
       "popularity": 97,
       "inStock": true,
-      "tags": ["water", "feature", "design"]
+      "tags": [
+        "water",
+        "feature",
+        "design"
+      ]
     }
   ],
-  "favorites": [],
-  "cart": []
+  "favorites": [
+    {
+      "id": 10,
+      "title": "Pest Control Service",
+      "category": "Protection",
+      "description": "Eco-friendly pest control solutions to protect your plants from insects and diseases.",
+      "price": 170,
+      "duration": "1-2 hours",
+      "image": "./img/fourthblock/secondimg.png",
+      "rating": 4.6,
+      "popularity": 86,
+      "inStock": true,
+      "tags": [
+        "pest",
+        "control",
+        "protection"
+      ],
+      "addedAt": "2025-08-22T13:56:11.928Z"
+    }
+  ],
+  "cart": [
+    {
+      "id": 5,
+      "title": "Lawn Care Service",
+      "category": "Lawn",
+      "description": "Complete lawn care including mowing, edging, fertilization and weed control for a perfect green lawn.",
+      "price": 150,
+      "duration": "2 hours",
+      "image": "./img/fourthblock/firstimg.png",
+      "rating": 4.6,
+      "popularity": 85,
+      "inStock": true,
+      "tags": [
+        "lawn",
+        "care",
+        "maintenance"
+      ],
+      "quantity": 1,
+      "total": 150,
+      "addedAt": "2025-08-22T13:56:04.216Z"
+    },
+    {
+      "id": 2,
+      "title": "Tree Planting",
+      "category": "Planting",
+      "description": "Expert tree planting service with proper soil preparation and aftercare instructions for optimal growth.",
+      "price": 250,
+      "duration": "3-5 hours",
+      "image": "./img/fourthblock/secondimg.png",
+      "rating": 4.9,
+      "popularity": 92,
+      "inStock": true,
+      "tags": [
+        "planting",
+        "trees",
+        "landscaping"
+      ],
+      "quantity": 1,
+      "total": 250,
+      "addedAt": "2025-08-22T14:14:17.991Z"
+    },
+    {
+      "id": 3,
+      "title": "Rush Removal",
+      "category": "Maintenance",
+      "description": "Complete removal of unwanted rush plants from your garden with eco-friendly methods.",
+      "price": 180,
+      "duration": "2-3 hours",
+      "image": "./img/fourthblock/thirdimg.png",
+      "rating": 4.7,
+      "popularity": 88,
+      "inStock": true,
+      "tags": [
+        "maintenance",
+        "cleaning",
+        "garden"
+      ],
+      "quantity": 1,
+      "total": 180,
+      "addedAt": "2025-08-22T14:14:23.483Z"
+    }
+  ]
 }

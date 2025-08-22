@@ -42,44 +42,74 @@
                 <h4 class="section-subtitle">— Our Services</h4>
             </div>
 
-                        <div class="search-filters">
-                <div class="search-section">
-                    <input type="text" id="search-input" class="search-input" 
-                           placeholder="Search services by name, description or category...">
-                </div>
+            <div class="search-filters">
 
-                <div class="filters-row">
-                    <div class="filter-group">
-                        <label class="filter-label">Sort by:</label>
+                <div class="search-section">
+                    <div class="search-input-container">
+                        <input type="text" id="search-input" class="search-input" 
+                            placeholder="Search by name, description, category or tags...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                </div>
+                
+                <div class="filters-grid">
+                    <div class="filter-section">
+                        <label class="filter-label">Categories</label>
+                        <div class="categories-grid" id="categories-container"></div>
+                    </div>
+
+                    <div class="filter-section">
+                        <label class="filter-label">Price Range</label>
+                        <div class="price-slider-container">
+                            <input type="range" id="price-min" class="price-slider" min="0" max="1000" value="0">
+                            <input type="range" id="price-max" class="price-slider" min="0" max="1000" value="1000">
+                        </div>
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span>$1000</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <label class="filter-label">Minimum Rating</label>
+                        <input type="range" id="rating-slider" class="rating-slider" min="0" max="5" step="0.1" value="0">
+                        <div class="rating-values">
+                            <span>0</span>
+                            <span>5</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <label class="filter-label">Sort By</label>
                         <select id="sort-select" class="filter-select">
-                            <option value="default">Default order</option>
-                            <option value="priceAsc">Price: Low to High</option>
-                            <option value="priceDesc">Price: High to Low</option>
-                            <option value="rating">Rating: Highest first</option>
-                            <option value="nameAsc">Name: A to Z</option>
-                            <option value="nameDesc">Name: Z to A</option>
-                            <option value="popularity">Popularity</option>
+                            <option value="id_asc">Default</option>
+                            <option value="price_asc">Price: Low to High</option>
+                            <option value="price_desc">Price: High to Low</option>
+                            <option value="rating_desc">Rating: Highest First</option>
+                            <option value="title_asc">Name: A to Z</option>
+                            <option value="title_desc">Name: Z to A</option>
+                            <option value="popularity_desc">Popularity</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="categories-section">
-                    <label class="filter-label">Filter by category:</label>
-                    <div class="categories-grid">
-                    </div>
+                <div class="filter-buttons">
+                    <button class="filter-button apply-filters" onclick="uiManager.applyFilters()">
+                        Apply Filters
+                    </button>
+                    <button class="filter-button reset" onclick="uiManager.resetFilters()">
+                        Reset All
+                    </button>
                 </div>
-
-            <div class="filter-buttons">
             </div>
 
-            <div id="filter-info" class="filter-info">
-            </div>
+            <div id="filter-info" class="filter-info"></div>
 
-            <div id="stats-container" class="stats-info">
-            </div>
-            
-            <div id="catalog-grid" class="catalog-grid">
-            </div>
+            <div id="stats-container" class="stats-info"></div>
+
+            <div id="catalog-grid" class="catalog-grid"></div>
+
+            <div id="pagination" class="pagination"></div>
         </section>
 
         <footer class="thirteenblock container">
