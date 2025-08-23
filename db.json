@@ -71,7 +71,7 @@
       "price": 15000,
       "rating": 4.9,
       "description": "Разработка индивидуального дизайна вашего участка с учетом всех пожеланий",
-      "image": "./img/services/design.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": true,
       "details": {
@@ -87,7 +87,7 @@
       "price": 12000,
       "rating": 4.8,
       "description": "Монтаж автоматической системы полива с таймером и регулировкой интенсивности",
-      "image": "./img/services/irrigation.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": true,
       "details": {
@@ -103,7 +103,7 @@
       "price": 2000,
       "rating": 4.6,
       "description": "Аккуратная стрижка газона с удалением скошенной травы и выравниванием кромок",
-      "image": "./img/services/lawn.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": false,
       "details": {
@@ -119,7 +119,7 @@
       "price": 3000,
       "rating": 4.7,
       "description": "Внесение органических и минеральных удобрений для улучшения качества почвы",
-      "image": "./img/services/fertilize.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": false,
       "details": {
@@ -135,7 +135,7 @@
       "price": 8000,
       "rating": 4.8,
       "description": "Создание красивых и функциональных садовых дорожек из различных материалов",
-      "image": "./img/services/path.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": true,
       "details": {
@@ -151,7 +151,7 @@
       "price": 4000,
       "rating": 4.7,
       "description": "Профессиональная обрезка деревьев для улучшения их здоровья и внешнего вида",
-      "image": "./img/services/pruning.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": false,
       "details": {
@@ -167,7 +167,7 @@
       "price": 10000,
       "rating": 4.9,
       "description": "Создание красивой альпийской горки с подбором камней и растений",
-      "image": "./img/services/rockery.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": true,
       "details": {
@@ -183,7 +183,7 @@
       "price": 15000,
       "rating": 4.8,
       "description": "Сборка и установка теплицы различных размеров и конфигураций",
-      "image": "./img/services/greenhouse.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": true,
       "details": {
@@ -199,7 +199,7 @@
       "price": 3500,
       "rating": 4.6,
       "description": "Комплексная уборка территории от листьев и подготовка сада к зиме",
-      "image": "./img/services/autumn.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": false,
       "details": {
@@ -215,7 +215,7 @@
       "price": 4000,
       "rating": 4.7,
       "description": "Комплекс работ по подготовке сада к новому сезону после зимы",
-      "image": "./img/services/spring.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": false,
       "details": {
@@ -231,7 +231,7 @@
       "price": 9000,
       "rating": 4.8,
       "description": "Монтаж системы садового освещения для создания уютной атмосферы в вечернее время",
-      "image": "./img/services/lighting.png",
+      "image": "./img/fourthblock/firstimg.png",
       "inStock": true,
       "popular": true,
       "details": {
@@ -241,6 +241,189 @@
       }
     }
   ],
-  "favorites": [],
-  "cart": []
+  "favorites": [
+    {
+      "id": "b8f4",
+      "name": "Весенняя подготовка",
+      "category": "Уход",
+      "price": 4000,
+      "rating": 4.7,
+      "description": "Комплекс работ по подготовке сада к новому сезону после зимы",
+      "image": "./img/services/spring.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "3-5 часов",
+        "area": "до 30 м²",
+        "complexity": "Средняя"
+      },
+      "productId": "14",
+      "userId": "ffa2"
+    },
+    {
+      "id": "83bb",
+      "name": "Ландшафтный дизайн",
+      "category": "Дизайн",
+      "price": 15000,
+      "rating": 4.9,
+      "description": "Разработка индивидуального дизайна вашего участка с учетом всех пожеланий",
+      "image": "./img/services/design.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "5-10 дней",
+        "area": "любая",
+        "complexity": "Высокая"
+      },
+      "productId": "5",
+      "userId": "ffa2"
+    },
+    {
+      "id": "2301",
+      "name": "Весенняя подготовка",
+      "category": "Уход",
+      "price": 4000,
+      "rating": 4.7,
+      "description": "Комплекс работ по подготовке сада к новому сезону после зимы",
+      "image": "./img/services/spring.png",
+      "inStock": true,
+      "popular": false,
+      "details": {
+        "duration": "3-5 часов",
+        "area": "до 30 м²",
+        "complexity": "Средняя"
+      },
+      "productId": "14",
+      "userId": "b697"
+    }
+  ],
+  "cart": [
+    {
+      "id": "8f21",
+      "name": "Ландшафтный дизайн",
+      "category": "Дизайн",
+      "price": 15000,
+      "rating": 4.9,
+      "description": "Разработка индивидуального дизайна вашего участка с учетом всех пожеланий",
+      "image": "./img/services/design.png",
+      "inStock": true,
+      "popular": true,
+      "details": {
+        "duration": "5-10 дней",
+        "area": "любая",
+        "complexity": "Высокая"
+      },
+      "productId": "5",
+      "userId": "ffa2",
+      "quantity": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "phone": "+375291234567",
+      "email": "admin@example.com",
+      "password": "$2b$10$rLv3V.exampleHashedPassword",
+      "firstName": "Иван",
+      "lastName": "Петров",
+      "patronymic": "Сергеевич",
+      "birthDate": "1985-05-15",
+      "nickname": "AdminIvan",
+      "role": "admin",
+      "agreementAccepted": true,
+      "registrationDate": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": "b697",
+      "phone": "+375296081350",
+      "email": "vladneckt@gmail.com",
+      "birthDate": "2001-02-23",
+      "firstName": "ULADZISLAU",
+      "lastName": "SHABOLDA",
+      "patronymic": "",
+      "nickname": "ULASHA450",
+      "role": "user",
+      "agreementAccepted": true,
+      "registrationDate": "2025-08-23T07:05:52.095Z",
+      "password": "$G#5Y29MusUW"
+    },
+    {
+      "id": "ffa2",
+      "phone": "+375295001352",
+      "email": "greg@gmail.com",
+      "birthDate": "2004-03-24",
+      "firstName": "rewrewrw",
+      "lastName": "erewrewrwe",
+      "patronymic": "",
+      "nickname": "UseUse2352024",
+      "role": "user",
+      "agreementAccepted": true,
+      "registrationDate": "2025-08-23T21:46:55.250Z",
+      "password": "OtO$I0NGFvg%"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "ed46",
+      "productId": 5,
+      "userId": null,
+      "rating": 5,
+      "comment": "уауцауаувпыавпывкупкукпвапварерууууупкупукпукпкпакипкууу",
+      "createdAt": "2025-08-23T21:52:13.843Z",
+      "status": "rejected"
+    },
+    {
+      "id": "2dd1",
+      "productId": 5,
+      "userId": null,
+      "rating": 5,
+      "comment": "пкппппппппппппппппппппппппппппппппппппппппппппппппппппппппппп",
+      "createdAt": "2025-08-23T22:07:02.382Z",
+      "status": "approved"
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": 2,
+      "products": [
+        {
+          "productId": 14,
+          "quantity": 1,
+          "price": 4000
+        }
+      ],
+      "totalAmount": 4000,
+      "orderDate": "2024-03-15T12:00:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "780d",
+      "userId": null,
+      "products": [
+        {
+          "productId": "5",
+          "quantity": 1,
+          "price": 15000
+        }
+      ],
+      "totalAmount": 15000,
+      "orderDate": "2025-08-23T21:51:52.016Z",
+      "status": "completed"
+    },
+    {
+      "id": "ffba",
+      "userId": null,
+      "products": [
+        {
+          "productId": "5",
+          "quantity": 1,
+          "price": 15000
+        }
+      ],
+      "totalAmount": 15000,
+      "orderDate": "2025-08-23T22:06:48.498Z",
+      "status": "completed"
+    }
+  ]
 }

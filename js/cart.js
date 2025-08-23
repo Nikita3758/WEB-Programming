@@ -1,42 +1,49 @@
 const API_URL = 'http://localhost:3000';
 
-// Загрузка корзины при открытии страницы
 document.addEventListener('DOMContentLoaded', function() {
     loadCart();
-    
-    // Обработчик для кнопки оформления заказа
     document.getElementById('checkoutBtn').addEventListener('click', checkout);
 });
 
-// Загрузка корзины
 function loadCart() {
-    fetch(`${API_URL}/cart`)
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+
+    if (!user.id) {
+        showEmptyCart();
+        return;
+    }
+
+    fetch(`${API_URL}/cart?userId=${user.id}`)
         .then(response => response.json())
         .then(cart => {
-            displayCart(cart);
-            updateSummary(cart);
+            if (cart.length === 0) {
+                showEmptyCart();
+            } else {
+                displayCart(cart);
+                updateSummary(cart);
+            }
         })
         .catch(error => {
             console.error('Ошибка загрузки корзины:', error);
+            showEmptyCart();
         });
 }
 
-// Отображение корзины
+function showEmptyCart() {
+    const container = document.getElementById('cartItems');
+    container.innerHTML = `
+        <div class="empty-cart">
+            <h3>Ваша корзина пуста</h3>
+            <p>Добавьте услуги из каталога</p>
+            <a href="catalog.html" class="back-to-catalog">Перейти в каталог</a>
+        </div>
+    `;
+    document.getElementById('cartSummary').style.display = 'none';
+    document.getElementById('checkoutBtn').style.display = 'none';
+}
+
 function displayCart(cart) {
     const container = document.getElementById('cartItems');
-    
-    if (cart.length === 0) {
-        container.innerHTML = `
-            <div class="empty-cart">
-                <h3>Ваша корзина пуста</h3>
-                <p>Добавьте услуги из каталога</p>
-                <a href="catalog.html" class="back-to-catalog">Перейти в каталог</a>
-            </div>
-        `;
-        document.getElementById('cartSummary').style.display = 'none';
-        document.getElementById('checkoutBtn').style.display = 'none';
-        return;
-    }
     
     document.getElementById('cartSummary').style.display = 'block';
     document.getElementById('checkoutBtn').style.display = 'block';
@@ -47,8 +54,7 @@ function displayCart(cart) {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.dataset.id = item.id;
-        
-        // ПРАВИЛЬНОЕ формирование HTML с вызовом функции
+
         cartItem.innerHTML = `
             <img src="${item.image}" alt="${item.name}" class="cart-item-image">
             <div class="cart-item-info">
@@ -70,7 +76,6 @@ function displayCart(cart) {
     });
 }
 
-// Обновление итоговой суммы
 function updateSummary(cart) {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
@@ -78,26 +83,6 @@ function updateSummary(cart) {
     document.getElementById('total').textContent = subtotal + ' руб.';
 }
 
-// Изменение количества товара
-function changeQuantity(productId, newQuantity) {
-    if (newQuantity < 1) newQuantity = 1;
-    
-    fetch(`${API_URL}/cart/${productId}`, {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            quantity: newQuantity
-        })
-    })
-    .then(() => {
-        // Перезагружаем корзину
-        loadCart();
-    });
-}
-
-// Изменение количества товара
 function changeQuantity(cartItemId, newQuantity) {
     if (newQuantity < 1) newQuantity = 1;
     
@@ -111,25 +96,29 @@ function changeQuantity(cartItemId, newQuantity) {
         })
     })
     .then(() => {
-        // Перезагружаем корзину
         loadCart();
     });
 }
 
-// Удаление из корзины (глобальная функция)
 function removeFromCart(cartItemId) {
     fetch(`${API_URL}/cart/${cartItemId}`, {
         method: 'DELETE'
     })
     .then(() => {
-        // Перезагружаем корзину
         loadCart();
     });
 }
 
-// Оформление заказа
 function checkout() {
-    fetch(`${API_URL}/cart`)
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    
+    if (!user.id) {
+        alert('Пожалуйста, войдите в систему для оформления заказа');
+        window.location.href = 'login.html';
+        return;
+    }
+
+    fetch(`${API_URL}/cart?userId=${user.id}`)
         .then(response => response.json())
         .then(cart => {
             if (cart.length === 0) {
@@ -137,17 +126,37 @@ function checkout() {
                 return;
             }
             
-            // Очищаем корзину
-            cart.forEach(item => {
-                fetch(`${API_URL}/cart/${item.id}`, {
-                    method: 'DELETE'
-                });
+            const order = {
+                userId: parseInt(user.id), 
+                products: cart.map(item => ({
+                    productId: item.productId,
+                    quantity: item.quantity,
+                    price: item.price
+                })),
+                totalAmount: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+                orderDate: new Date().toISOString(),
+                status: 'completed'
+            };
+
+            fetch(`${API_URL}/orders`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            })
+            .then(() => {
+                return Promise.all(cart.map(item => 
+                    fetch(`${API_URL}/cart/${item.id}`, { method: 'DELETE' })
+                ));
+            })
+            .then(() => {
+                alert('Заказ успешно оформлен! Спасибо за покупку!');
+                loadCart();
             });
-            
-            // Показываем сообщение об успешном заказе
-            alert('Заказ успешно оформлен! Спасибо за покупку!');
-            
-            // Перезагружаем корзину
-            loadCart();
+        })
+        .catch(error => {
+            console.error('Ошибка оформления заказа:', error);
+            alert('Произошла ошибка при оформлении заказа');
         });
 }

@@ -283,10 +283,18 @@ function setupPagination(totalCount) {
 }
 
 function addToFavorites(productId) {
-    fetch(`${API_URL}/favorites`)
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    
+    if (!user.id) {
+        alert('Пожалуйста, войдите в систему чтобы добавить товар в избранное');
+        window.location.href = 'login.html';
+        return;
+    }
+
+    fetch(`${API_URL}/favorites?userId=${user.id}&productId=${productId}`)
         .then(response => response.json())
         .then(favorites => {
-            if (favorites.some(item => item.productId == productId)) {
+            if (favorites.length > 0) {
                 alert('Этот товар уже в избранном!');
                 return;
             }
@@ -296,7 +304,8 @@ function addToFavorites(productId) {
                 .then(product => {
                     const favoriteItem = {
                         ...product,
-                        productId: product.id 
+                        productId: product.id,
+                        userId: user.id, 
                     };
 
                     delete favoriteItem.id;
@@ -316,10 +325,18 @@ function addToFavorites(productId) {
 }
 
 function addToCart(productId) {
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    
+    if (!user.id) {
+        alert('Пожалуйста, войдите в систему чтобы добавить товар в корзину');
+        window.location.href = 'login.html';
+        return;
+    }
+
     fetch(`${API_URL}/products/${productId}`)
         .then(response => response.json())
         .then(product => {
-            fetch(`${API_URL}/cart`)
+            fetch(`${API_URL}/cart?userId=${user.id}&productId=${productId}`)
                 .then(response => response.json())
                 .then(cart => {
                     const existingItem = cart.find(item => item.productId == productId);
@@ -340,7 +357,8 @@ function addToCart(productId) {
                     } else {
                         const cartItem = {
                             ...product,
-                            productId: product.id, 
+                            productId: product.id,
+                            userId: user.id, 
                             quantity: 1
                         };
 

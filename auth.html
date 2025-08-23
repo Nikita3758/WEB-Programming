@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmzi - Регистрация</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/auth.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="firstblock container">
+            <div class="header-content">
+                <img src="./img/header/logo.png" alt="Farmzi Logo" class="logo">
+
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="feedback.html">FeedBack</a></li>
+                        <li><a href="auth.html">Reg</a></li>
+                    </ul>
+                </nav>
+                <div class="user-menu">
+                    <div class="user-avatar" id="userAvatar">Г</div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html">Профиль</a>
+                        <a href="orders.html">Мои заказы</a>
+                        <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+                    </div>
+                </div>
+                <div class="header-contact">
+                    <h2>Call us:</h2>
+                    <h2>+00 89 458 648</h2>
+                </div>
+            </div>
+        </header>
+
+        <section class="auth-container">
+            <div class="auth-form">
+                <h2 class="section-title">Регистрация</h2>
+                
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label>Телефон *</label>
+                        <input type="tel" id="phone" placeholder="+375 XX XXX-XX-XX" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="email" placeholder="example@mail.com" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Дата рождения *</label>
+                        <input type="date" id="birthDate" required>
+                        <span class="error-message" id="birthDateError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Способ задания пароля</label>
+                        <select id="passwordMethod">
+                            <option value="auto">Автоматически</option>
+                            <option value="manual">Ввести самостоятельно</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group manual-password" style="display: none;">
+                        <label>Пароль *</label>
+                        <input type="password" id="password" placeholder="Минимум 8 символов">
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-group manual-password" style="display: none;">
+                        <label>Повторите пароль *</label>
+                        <input type="password" id="confirmPassword">
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Имя *</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Фамилия *</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Отчество</label>
+                        <input type="text" id="patronymic">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Никнейм</label>
+                        <div class="nickname-group">
+                            <input type="text" id="nickname" readonly>
+                            <button type="button" id="generateNickname">Сгенерировать</button>
+                        </div>
+                        <span class="error-message" id="nicknameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreement" required>
+                            <span>Я прочитал и согласен с <a href="#">пользовательским соглашением</a> *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" id="submitBtn" disabled>Зарегистрироваться</button>
+                </form>
+
+                <p class="auth-switch">
+                    Уже есть аккаунт? <a href="#" id="switchToLogin">Войти</a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/auth.js"></script>
+</body>
+</html>

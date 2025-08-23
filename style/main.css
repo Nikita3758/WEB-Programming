@@ -114,6 +114,7 @@ img {
     display: flex;
     margin-left: -145px;
     gap: 30px;
+    align-items: center;
 }
 
 .nav-menu li {
@@ -1309,4 +1310,62 @@ img {
 
 .fade-in {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Стили для отображения пользователя */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #A4D6CF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #177165;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    min-width: 150px;
+    display: none;
+    z-index: 1000;
+}
+
+.user-dropdown.show {
+    display: block;
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #177165;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-dropdown a:hover {
+    background: #E1F4F2;
+    border-radius: 4px;
+}
+
+.user-dropdown .logout-btn {
+    color: #ff4d4d;
+    border-top: 1px solid #eee;
+    margin-top: 5px;
+    padding-top: 10px;
 }

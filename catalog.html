@@ -9,31 +9,44 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="firstblock container">
-            <div class="header-content">
-                <img src="./img/header/logo.png" alt="Farmzi Logo" class="logo">
+<header class="firstblock container">
+    <div class="header-content">
+        <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
 
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="catalog.html">Catalog</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="favorites.html">Favorites</a></li>
-                    </ul>
-                </nav>
-                <div class="header-contact">
-                    <h2>Call us:</h2>
-                    <h2>+00 89 458 648</h2>
-                </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
+                <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
+                <li><a href="login.html" id="loginLink">Войти</a></li>
+                <li><a href="auth.html" id="registerLink">Регистрация</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-menu" id="userMenu" style="display: none;">
+            <div class="user-avatar" id="userAvatar">Г</div>
+            <div class="user-dropdown" id="userDropdown">
+                <a href="profile.html">Профиль</a>
+                <a href="orders.html">Мои заказы</a>
+                <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
             </div>
-        </header>
+        </div>
+        
+        <div class="header-contact">
+            <h2>Позвоните нам:</h2>
+            <h2>+00 89 458 648</h2>
+        </div>
+    </div>
+</header>
 
         <section class="catalog-container">
             <h2 class="section-title">Каталог наших услуг</h2>
@@ -134,5 +147,19 @@
     </div>
 
     <script src="./js/catalog.js"></script>
+        <script src="./js/user.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateNavigation();
+        });
+    </script>
+    <script>
+        // Обновляем навигацию при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof updateNavigation === 'function') {
+                updateNavigation();
+            }
+        });
+    </script>
 </body>
 </html>
