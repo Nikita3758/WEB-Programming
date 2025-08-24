@@ -7,47 +7,48 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/auth.css">
     <link rel="stylesheet" href="./style/admin.css">
+    <link rel="stylesheet" href="./style/modal.css">
 </head>
 <body>
     <div class="wrapper">
-<header class="firstblock container">
-    <div class="header-content">
-        <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
+        <header class="firstblock container">
+            <div class="header-content">
+                <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-        <nav class="nav">
-            <ul class="nav-menu">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
-                <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
-                <li><a href="login.html" id="loginLink">Войти</a></li>
-                <li><a href="auth.html" id="registerLink">Регистрация</a></li>
-            </ul>
-        </nav>
-        
-        <div class="user-menu" id="userMenu" style="display: none;">
-            <div class="user-avatar" id="userAvatar">Г</div>
-            <div class="user-dropdown" id="userDropdown">
-                <a href="profile.html">Профиль</a>
-                <a href="orders.html">Мои заказы</a>
-                <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                        <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
+                        <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
+                        <li><a href="login.html" id="loginLink">Войти</a></li>
+                        <li><a href="auth.html" id="registerLink">Регистрация</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <div class="user-avatar" id="userAvatar">Г</div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html">Профиль</a>
+                        <a href="orders.html">Мои заказы</a>
+                        <a href="#" class="logout-btn">Выйти</a>
+                    </div>
+                </div>
+                
+                <div class="header-contact">
+                    <h2>Позвоните нам:</h2>
+                    <h2>+00 89 458 648</h2>
+                </div>
             </div>
-        </div>
-        
-        <div class="header-contact">
-            <h2>Позвоните нам:</h2>
-            <h2>+00 89 458 648</h2>
-        </div>
-    </div>
-</header>
+        </header>
 
         <section class="admin-container">
             <h2 class="section-title">Админ-панель</h2>
@@ -58,79 +59,9 @@
                 <button class="tab-btn" data-tab="stats">Статистика</button>
             </div>
 
-            <!-- Вкладка управления товарами -->
             <div class="tab-content active" id="products-tab">
                 <div class="admin-section">
-                    <h3>Добавить новый товар</h3>
-                    <form id="productForm" class="admin-form">
-                        <input type="hidden" id="productId">
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Название товара *</label>
-                                <input type="text" id="productName" required minlength="3">
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Категория *</label>
-                                <select id="productCategory" required>
-                                    <option value="">Выберите категорию</option>
-                                    <option value="Посадка">Посадка</option>
-                                    <option value="Уход">Уход</option>
-                                    <option value="Дизайн">Дизайн</option>
-                                    <option value="Обустройство">Обустройство</option>
-                                </select>
-                                <span class="error-message" id="categoryError"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Цена (руб) *</label>
-                                <input type="number" id="productPrice" required min="0">
-                                <span class="error-message" id="priceError"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Рейтинг *</label>
-                                <input type="number" id="productRating" required min="0" max="5" step="0.1">
-                                <span class="error-message" id="ratingError"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Описание *</label>
-                            <textarea id="productDescription" required minlength="10"></textarea>
-                            <span class="error-message" id="descriptionError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label>URL изображения</label>
-                            <input type="url" id="productImage" placeholder="https://example.com/image.jpg">
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Сложность</label>
-                                <select id="productComplexity">
-                                    <option value="Низкая">Низкая</option>
-                                    <option value="Средняя">Средняя</option>
-                                    <option value="Высокая">Высокая</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Длительность</label>
-                                <input type="text" id="productDuration" placeholder="2-4 часа">
-                            </div>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="submit" id="saveProductBtn" disabled>Сохранить товар</button>
-                            <button type="button" id="resetFormBtn">Очистить форму</button>
-                        </div>
-                    </form>
+                    <button class="btn-primary" id="addProductBtn">+ Добавить товар</button>
                 </div>
 
                 <div class="admin-section">
@@ -141,7 +72,6 @@
                 </div>
             </div>
 
-            <!-- Вкладка управления отзывами -->
             <div class="tab-content" id="reviews-tab">
                 <div class="admin-section">
                     <h3>Фильтры отзывов</h3>
@@ -180,7 +110,6 @@
                 </div>
             </div>
 
-            <!-- Вкладка статистики -->
             <div class="tab-content" id="stats-tab">
                 <div class="stats-grid">
                     <div class="stat-card">
@@ -214,8 +143,86 @@
         </section>
     </div>
 
+    <!-- Модальное окно добавления/редактирования товара -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Добавить товар</h3>
+            
+            <form id="productForm" class="admin-form">
+                <input type="hidden" id="productId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Название товара *</label>
+                        <input type="text" id="productName" required minlength="3">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Категория *</label>
+                        <select id="productCategory" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="Посадка">Посадка</option>
+                            <option value="Уход">Уход</option>
+                            <option value="Дизайн">Дизайн</option>
+                            <option value="Обустройство">Обустройство</option>
+                        </select>
+                        <span class="error-message" id="categoryError"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Цена (руб) *</label>
+                        <input type="number" id="productPrice" required min="0">
+                        <span class="error-message" id="priceError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Рейтинг *</label>
+                        <input type="number" id="productRating" required min="0" max="5" step="0.1">
+                        <span class="error-message" id="ratingError"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Описание *</label>
+                    <textarea id="productDescription" required minlength="10"></textarea>
+                    <span class="error-message" id="descriptionError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>URL изображения</label>
+                    <input type="url" id="productImage" placeholder="https://example.com/image.jpg">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Сложность</label>
+                        <select id="productComplexity">
+                            <option value="Низкая">Низкая</option>
+                            <option value="Средняя">Средняя</option>
+                            <option value="Высокая">Высокая</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Длительность</label>
+                        <input type="text" id="productDuration" placeholder="2-4 часа">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="saveProductBtn">Сохранить товар</button>
+                    <button type="button" id="cancelProductBtn">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Модальное окно подтверждения удаления -->
-    <div id="confirmModal" class="modal" style="display: none;">
+    <div id="confirmModal" class="modal">
         <div class="modal-content">
             <h3>Подтверждение удаления</h3>
             <p id="confirmMessage">Вы уверены, что хотите удалить этот элемент?</p>
@@ -226,19 +233,12 @@
         </div>
     </div>
 
+    <!-- Уведомление -->
+    <div class="notification" id="notification"></div>
+
+    <script src="./js/user.js"></script>
     <script src="./js/admin.js"></script>
-        <script src="./js/user.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            updateNavigation();
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof updateNavigation === 'function') {
-                updateNavigation();
-            }
-        });
-    </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/admin-modal.js"></script>
 </body>
 </html>

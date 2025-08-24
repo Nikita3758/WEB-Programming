@@ -12,33 +12,45 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeAdminPanel() {
-    document.querySelectorAll('.tab-btn').forEach(btn => {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            tabButtons.forEach(function(b) {
+                b.classList.remove('active');
+            });
+
+            document.querySelectorAll('.tab-content').forEach(function(c) {
+                c.classList.remove('active');
+            });
 
             this.classList.add('active');
-            document.getElementById(`${this.dataset.tab}-tab`).classList.add('active');
 
-            if (this.dataset.tab === 'reviews') {
+            const tabId = this.getAttribute('data-tab') + '-tab';
+            document.getElementById(tabId).classList.add('active');
+
+            if (this.getAttribute('data-tab') === 'reviews') {
                 loadReviews();
-            } else if (this.dataset.tab === 'stats') {
+            } else if (this.getAttribute('data-tab') === 'stats') {
                 loadStats();
             }
         });
     });
 
     const productForm = document.getElementById('productForm');
-    productForm.addEventListener('input', validateProductForm);
-    productForm.addEventListener('submit', handleProductSubmit);
+    if (productForm) {
+        productForm.addEventListener('input', validateProductForm);
+        productForm.addEventListener('submit', handleProductSubmit);
+    }
+
+    const productFilter = document.getElementById('reviewProductFilter');
+    const statusFilter = document.getElementById('reviewStatusFilter');
     
-    document.getElementById('resetFormBtn').addEventListener('click', resetProductForm);
-
-    document.getElementById('reviewProductFilter').addEventListener('change', loadReviews);
-    document.getElementById('reviewUserFilter').addEventListener('change', loadReviews);
-    document.getElementById('reviewStatusFilter').addEventListener('change', loadReviews);
-
-    document.getElementById('cancelDeleteBtn').addEventListener('click', hideModal);
+    if (productFilter) {
+        productFilter.addEventListener('change', loadReviews);
+    }
+    if (statusFilter) {
+        statusFilter.addEventListener('change', loadReviews);
+    }
 }
 
 function validateProductForm() {
@@ -119,29 +131,25 @@ async function handleProductSubmit(e) {
         if (currentProductId) {
             response = await fetch(`${API_URL}/products/${currentProductId}`, {
                 method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(productData)
             });
         } else {
             response = await fetch(`${API_URL}/products`, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(productData)
             });
         }
         
         if (response.ok) {
-            alert(currentProductId ? 'Товар обновлен!' : 'Товар добавлен!');
-            resetProductForm();
+            showNotification(currentProductId ? 'Товар обновлен!' : 'Товар добавлен!');
+            document.getElementById('productModal').style.display = 'none';
             loadProducts();
         }
     } catch (error) {
         console.error('Ошибка сохранения товара:', error);
-        alert('Ошибка сохранения товара');
+        showNotification('Ошибка сохранения товара', true);
     }
 }
 
@@ -172,14 +180,15 @@ async function loadProducts() {
                     <p>${product.description}</p>
                 </div>
                 <div class="product-actions">
-                    <button class="btn-edit" onclick="editProduct(${product.id})">✏️</button>
-                    <button class="btn-delete" onclick="confirmDelete('product', ${product.id})">🗑️</button>
+                    <button class="btn-edit" onclick="editProduct('${product.id}')">✏️</button>
+                    <button class="btn-delete" onclick="confirmDelete('product', '${product.id}')">🗑️</button>
                 </div>
             `;
             productsList.appendChild(productItem);
         });
     } catch (error) {
         console.error('Ошибка загрузки товаров:', error);
+        showNotification('Ошибка загрузки товаров', true);
     }
 }
 
@@ -201,10 +210,23 @@ async function editProduct(productId) {
         currentProductId = product.id;
         validateProductForm();
 
-        document.getElementById('productForm').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('modalTitle').textContent = 'Редактировать товар';
+        document.getElementById('productModal').style.display = 'block';
     } catch (error) {
         console.error('Ошибка загрузки товара:', error);
+        showNotification('Ошибка загрузки товара', true);
     }
+}
+
+function showNotification(message, isError = false) {
+    const notification = document.getElementById('notification');
+    notification.textContent = message;
+    notification.className = `notification ${isError ? 'error' : ''}`;
+    notification.classList.add('show');
+    
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
 }
 
 async function loadReviews() {

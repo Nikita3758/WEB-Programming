@@ -5,50 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/preloader.css">
+    <link rel="stylesheet" href="./style/media-gallery.css">
+    <link rel="stylesheet" href="./style/parallax.css">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
     <title>Farmzi - Gardening & Landscaping Services</title>
 </head>
 <body>
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
     <div class="wrapper">
-        <header class="firstblock container">
-            <div class="header-content">
-                <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
+    <header class="firstblock container">
+        <div class="header-content">
+            <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
 
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <nav class="nav" id="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="cart.html">Корзина</a></li>
+                    <li><a href="favorites.html">Избранное</a></li>
+                    <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
+                    <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
+                    <li><a href="login.html" id="loginLink">Войти</a></li>
+                    <li><a href="auth.html" id="registerLink">Регистрация</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" id="mobileMenuToggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="favorites.html">Favorites</a></li>
-                        <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
-                        <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
-                        <li><a href="login.html" id="loginLink">Войти</a></li>
-                        <li><a href="auth.html" id="registerLink">Регистрация</a></li>
-                    </ul>
-                </nav>
                 
-                <div class="user-menu" id="userMenu" style="display: none;">
-                    <div class="user-avatar" id="userAvatar">Г</div>
-                    <div class="user-dropdown" id="userDropdown">
-                        <a href="profile.html">Профиль</a>
-                        <a href="orders.html">Мои заказы</a>
-                        <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+                <div class="by">
+                    <div class="header-contact">
+                        <h2>Позвоните нам:</h2>
+                        <h2>+00 89 458 648</h2>
+                    </div>
+                    
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <div class="user-avatar" id="userAvatar">Г</div>
+                        <div class="user-dropdown" id="userDropdown">
+                            <a href="profile.html">Профиль</a>
+                            <a href="orders.html">Мои заказы</a>
+                            <a href="#" class="logout-btn">Выйти</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="header-contact">
-                    <h2>Позвоните нам:</h2>
-                    <h2>+00 89 458 648</h2>
-                </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <section class="secondblock container">
+        <section class="secondblock container" id="home">
             <div class="hero-content">
                 <h4 class="section-subtitle">Make a garden with musion.</h4>
                 <h2 class="hero-title">
@@ -64,7 +76,53 @@
             <img src="./img/secondblock/img.png" alt="Watering flowers in garden" class="hero-image">
         </section>
 
-        <section class="thirdblock container">
+        <section class="secondblock parallax-container" id="home">
+            <div class="parallax-wrapper">
+                <div class="parallax-layer layer-back" data-speed="0.1">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=800&fit=crop" 
+                        alt="Mountains background" class="parallax-image">
+                    <div class="layer-label">Background Layer (Slow)</div>
+                </div>
+
+                <div class="parallax-layer layer-middle" data-speed="0.3">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1000&h=700&fit=crop" 
+                        alt="Forest middle" class="parallax-image">
+                    <div class="layer-label">Middle Layer (Medium)</div>
+                </div>
+
+                <div class="parallax-layer layer-foreground" data-speed="0.8">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=900&h=600&fit=crop" 
+                        alt="Flowers foreground" class="parallax-image">
+                    <div class="layer-label">Foreground Layer (Fast)</div>
+                </div>
+
+                <div class="parallax-layer layer-reverse" data-speed="-0.4">
+                    <div class="floating-elements">
+                        <div class="floating-item">🌼</div>
+                        <div class="floating-item">🍃</div>
+                        <div class="floating-item">🌸</div>
+                        <div class="floating-item">🌿</div>
+                    </div>
+                </div>
+
+                <div class="parallax-content">
+                    <div class="hero-content">
+                        <h4 class="section-subtitle">Make a garden with musion.</h4>
+                        <h2 class="hero-title">
+                            If you have a <br class="desktop-only">
+                            garden and a <br class="desktop-only">
+                            library, you have <br class="desktop-only">
+                            everything you <br class="desktop-only">
+                            need.
+                        </h2>
+                        <h4 class="quote-author">— Marcus Tullius Cicero</h4>
+                        <a href="#services" class="cta-button scroll-link">All Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="thirdblock container" id="about">
             <div class="thirdblock_inner">
                 <h4 class="section-subtitle">— About Company</h4>
                 <h3 class="section-title">
@@ -106,7 +164,7 @@
             </div>
         </section>
 
-        <section class="fourthblock container">
+        <section class="fourthblock container" id="services">
             <div class="fourthblock_inner">
                 <h4 class="section-subtitle">— Our Services</h4>
                 <h3 class="section-title">
@@ -139,7 +197,62 @@
             </div>
         </section>
 
-        <section class="fifthblock container">
+                <section class="media-gallery-block container" id="gallery">
+            <div class="media-gallery-inner">
+                <h4 class="section-subtitle">— Interactive Gallery</h4>
+                <h3 class="section-title">
+                    Discover the beauty of nature through 
+                    our interactive gallery
+                </h3>
+                
+                <div class="media-gallery">
+                    <div class="gallery-controls">
+                        <button class="gallery-btn nature-btn" data-type="nature">
+                            <span class="btn-icon">🌿</span>
+                            <span class="btn-text">Nature Sounds</span>
+                        </button>
+                        <button class="gallery-btn garden-btn" data-type="garden">
+                            <span class="btn-icon">🌸</span>
+                            <span class="btn-text">Garden Melodies</span>
+                        </button>
+                    </div>
+
+                    <div class="gallery-content">
+                        <div class="image-container">
+                            <img src="./img/gallery/1.jpg" alt="Nature image" id="galleryImage" class="gallery-image">
+                            <div class="image-overlay">
+                                <div class="player-controls">
+                                    <button id="playPauseBtn" class="control-btn">
+                                        <span class="play-icon">▶️</span>
+                                        <span class="pause-icon">⏸️</span>
+                                    </button>
+                                    <div class="volume-control">
+                                        <span class="volume-icon">🔊</span>
+                                        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+                                    </div>
+                                    <div class="track-info">
+                                        <span id="currentTrack">Select a sound</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="imagesViewed">0</span>
+                            <span class="stat-label">Images Viewed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="soundsPlayed">0</span>
+                            <span class="stat-label">Sounds Played</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fifthblock container" id="contact">
             <div class="fifthblock_inner">
                 <h4 class="section-subtitle">— Call To Action</h4>
                 <h3 class="cta-title">
@@ -154,7 +267,7 @@
             </div>
         </section>
 
-        <section class="sixthblock container">
+        <section class="sixthblock container" id="team">
             <div class="sixthblock_inner">
                 <h4 class="section-subtitle">— Team Members</h4>
                 <h2 class="section-title">
@@ -193,42 +306,67 @@
             </div>
         </section>
 
-        <section class="seventhblock container">
-            <div class="seventhblock_inner">
-                <div class="video-content">
-                    <h4 class="section-subtitle">— Company intro video</h4>
-                    <h3 class="video-title">
-                        See our intro video and 
-                        lets start your dream 
-                        project.
-                    </h3>
-                </div>
+<section class="seventhblock container" id="projects">
+    <div class="seventhblock_inner">
+        <div class="video-content">
+            <h4 class="section-subtitle">— Company intro video</h4>
+            <h3 class="video-title">
+                See our intro video and 
+                lets start your dream 
+                project.
+            </h3>
+        </div>
+        
+        <div class="video-container">
+            <div class="video-thumbnail" id="videoThumbnail">
                 <img src="./img/seventhblock/img.png" alt="Green leaves background" class="video-bg">
+                <div class="video-play-overlay">
+                    <button class="play-video-btn">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="40" fill="white" fill-opacity="0.9"/>
+                            <path d="M32 26L56 40L32 54V26Z" fill="#177165"/>
+                        </svg>
+                        <span class="play-text">Смотреть видео</span>
+                    </button>
+                </div>
             </div>
-        </section>
+            
+            <div class="video-player" id="videoPlayer" style="display: none;">
+                <video controls id="introVideo">
+                    <source src="./img/seventhblock/company-intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="close-video-btn">&times;</button>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="eighthblock container">
             <div class="eighthblock_inner">
                 <div class="stat-item">
-                    <h2>847 +</h2>
+                    <h2 data-target="847">0</h2>
                     <h4>— Project Done</h4>
                 </div>
                 <div class="stat-item">
-                    <h2>753 +</h2>
+                    <h2 data-target="753"></h2>
                     <h4>— Happy Client</h4>
                 </div>
                 <div class="stat-item">
-                    <h2>284 +</h2>
+                    <h2 data-target="284"></h2>
                     <h4>— Team Member</h4>
                 </div>
                 <div class="stat-item">
-                    <h2>98 +</h2>
+                    <h2 data-target="98"></h2>
                     <h4>— Winning Award</h4>
                 </div>
             </div>
         </section>
 
-        <section class="ninethblock container">
+<section class="ninethblock container">
+    <div class="slider-container" id="projectSlider">
+        <!-- Слайд 1 -->
+        <div class="slider-slide active">
             <div class="ninethblock_inner">
                 <div class="project-info">
                     <ul class="project-details">
@@ -238,12 +376,47 @@
                     </ul>
                 </div>
             </div>
-            <div class="navigation-controls">
-                <img src="./img/ninethblock/arrows.png" alt="Navigation arrows" class="navigation-arrows">
-            </div>
-        </section>
+        </div>
 
-        <section class="tenthblock container">
+        <!-- Слайд 2 -->
+        <div class="slider-slide">
+            <div class="ninethblock_inner">
+                <div class="project-info">
+                    <ul class="project-details">
+                        <li><span class="detail-label">Project:</span> Garden Renovation</li>
+                        <li><span class="detail-label">Client:</span> Sarah Johnson</li>
+                        <li><span class="detail-label">Location:</span> California, USA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Слайд 3 -->
+        <div class="slider-slide">
+            <div class="ninethblock_inner">
+                <div class="project-info">
+                    <ul class="project-details">
+                        <li><span class="detail-label">Project:</span> Landscape Design</li>
+                        <li><span class="detail-label">Client:</span> Michael Brown</li>
+                        <li><span class="detail-label">Location:</span> Texas, USA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navigation-controls">
+        <button class="slider-arrow prev-arrow">←</button>
+        <div class="slider-dots">
+            <span class="slider-dot active" data-slide="0"></span>
+            <span class="slider-dot" data-slide="1"></span>
+            <span class="slider-dot" data-slide="2"></span>
+        </div>
+        <button class="slider-arrow next-arrow">→</button>
+    </div>
+</section>
+
+        <section class="tenthblock container" id="testimonials">
             <div class="tenthblock_inner">
                 <h4 class="section-subtitle">— Happy Clients</h4>
                 <h2 class="section-title">Farmzi got best feedback from happy clients</h2>
@@ -264,7 +437,7 @@
             </div>
         </section>
 
-        <section class="eleventhblock container">
+        <section class="eleventhblock container" id="news">
             <div class="eleventhblock_inner">
                 <h4 class="section-subtitle">— Latest News</h4>
                 <h2 class="section-title">
@@ -303,6 +476,9 @@
                         </div>
                     </article>
                 </div>
+            </div>
+            <div class="contact-map">
+                <div id="map"></div>
             </div>
         </section>
 
@@ -361,8 +537,19 @@
             <p>© 2022 design and developed by <span>Brandbes</span>. Powered by <span>Webflow</span></p>
         </div>
     </div>
-
+        <div class="overlay" id="overlay"></div>
     <script src="./js/user.js"></script>
+    <script src="./js/video.js"></script>
+    <script src="./js/preloader.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/parallax.js"></script>
+    <script src="./js/media-gallery.js"></script>
+    <script src="./js/counters.js"></script>
+    <script src="./js/smooth-scroll.js"></script>
+    <script src="./js/burger-menu.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>
+    <script src="./js/map.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             updateNavigation();
@@ -373,26 +560,6 @@
             if (typeof updateNavigation === 'function') {
                 updateNavigation();
             }
-        });
-    </script>
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.mobile-menu-toggle');
-            const nav = document.querySelector('.nav');
-            
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                });
-            });
         });
     </script>
 </body>

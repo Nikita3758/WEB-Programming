@@ -198,7 +198,6 @@
     margin-top: 5px;
 }
 
-/* Адаптивность */
 @media (max-width: 576px) {
     .auth-container {
         padding: 30px 15px;
