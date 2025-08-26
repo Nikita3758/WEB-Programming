@@ -7,79 +7,91 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/auth.css">
     <link rel="stylesheet" href="./style/admin.css">
+    <link rel="stylesheet" href="./style/themes.css">
+    <link rel="stylesheet" href="./style/modal-user.css">
 </head>
 <body>
     <div class="wrapper">
-<header class="firstblock container">
-    <div class="header-content">
-        <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
+                <header class="firstblock container">
+            <div class="header-content">
+                <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-        <nav class="nav">
-            <ul class="nav-menu">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
-                <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
-                <li><a href="login.html" id="loginLink">Войти</a></li>
-                <li><a href="auth.html" id="registerLink">Регистрация</a></li>
-            </ul>
-        </nav>
-        
-        <div class="user-menu" id="userMenu" style="display: none;">
-            <div class="user-avatar" id="userAvatar">Г</div>
-            <div class="user-dropdown" id="userDropdown">
-                <a href="profile.html">Профиль</a>
-                <a href="orders.html">Мои заказы</a>
-                <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+                        <li><a href="catalog.html" data-i18n="nav.catalog">Каталог</a></li>
+                        <li><a href="cart.html" data-i18n="nav.cart">Cart</a></li>
+                        <li><a href="favorites.html" data-i18n="nav.favorites">Favorites</a></li>
+                        <li><a href="feedback.html" id="feedbackLink" style="display: none;" data-i18n="nav.feedback">Отзывы</a></li>
+                        <li><a href="admin.html" id="adminLink" style="display: none;" data-i18n="nav.admin">Админ-панель</a></li>
+                        <li><a href="login.html" id="loginLink" data-i18n="nav.login">Войти</a></li>
+                        <li><a href="auth.html" id="registerLink" data-i18n="nav.register">Регистрация</a></li>
+                    </ul>
+                </nav>
+
+                <div class="control-panel">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <div class="theme-switcher">
+                        <button class="theme-btn light active" data-theme="light">☀️</button>
+                        <button class="theme-btn dark" data-theme="dark">🌙</button>
+                    </div>
+                </div>
+                
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <div class="user-avatar" id="userAvatar">Г</div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html" data-i18n="nav.profile">Профиль</a>
+                        <a href="orders.html" data-i18n="nav.orders">Мои заказы</a>
+                        <a href="#" class="logout-btn" onclick="logout()" data-i18n="nav.logout">Выйти</a>
+                    </div>
+                </div>
+                
+                <div class="header-contact">
+                    <h2 data-i18n="header.call">Позвоните нам:</h2>
+                    <h2>+00 89 458 648</h2>
+                </div>
             </div>
-        </div>
-        
-        <div class="header-contact">
-            <h2>Позвоните нам:</h2>
-            <h2>+00 89 458 648</h2>
-        </div>
-    </div>
-</header>
+        </header>
 
         <section class="admin-container">
-            <h2 class="section-title">Админ-панель</h2>
+            <h2 class="section-title" data-i18n="admin.title">Админ-панель</h2>
             
             <div class="admin-tabs">
-                <button class="tab-btn active" data-tab="products">Управление товарами</button>
-                <button class="tab-btn" data-tab="reviews">Управление отзывами</button>
-                <button class="tab-btn" data-tab="stats">Статистика</button>
+                <button class="tab-btn active" data-tab="products" data-i18n="admin.productsTab">Управление товарами</button>
+                <button class="tab-btn" data-tab="reviews" data-i18n="admin.reviewsTab">Управление отзывами</button>
+                <button class="tab-btn" data-tab="stats" data-i18n="admin.statsTab">Статистика</button>
             </div>
 
-            <!-- Вкладка управления товарами -->
             <div class="tab-content active" id="products-tab">
                 <div class="admin-section">
-                    <h3>Добавить новый товар</h3>
+                    <h3 data-i18n="admin.addProduct">Добавить новый товар</h3>
                     <form id="productForm" class="admin-form">
                         <input type="hidden" id="productId">
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Название товара *</label>
+                                <label data-i18n="admin.productName">Название товара *</label>
                                 <input type="text" id="productName" required minlength="3">
                                 <span class="error-message" id="nameError"></span>
                             </div>
                             
                             <div class="form-group">
-                                <label>Категория *</label>
+                                <label data-i18n="admin.productCategory">Категория *</label>
                                 <select id="productCategory" required>
-                                    <option value="">Выберите категорию</option>
-                                    <option value="Посадка">Посадка</option>
-                                    <option value="Уход">Уход</option>
-                                    <option value="Дизайн">Дизайн</option>
-                                    <option value="Обустройство">Обустройство</option>
+                                    <option value="" data-i18n="admin.selectCategory">Выберите категорию</option>
+                                    <option value="planting" data-i18n="category.planting">Посадка</option>
+                                    <option value="care" data-i18n="category.care">Уход</option>
+                                    <option value="design" data-i18n="category.design">Дизайн</option>
+                                    <option value="maintenance" data-i18n="category.maintenance">Обустройство</option>
                                 </select>
                                 <span class="error-message" id="categoryError"></span>
                             </div>
@@ -87,147 +99,202 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Цена (руб) *</label>
+                                <label data-i18n="admin.productPrice">Цена (руб) *</label>
                                 <input type="number" id="productPrice" required min="0">
                                 <span class="error-message" id="priceError"></span>
                             </div>
                             
                             <div class="form-group">
-                                <label>Рейтинг *</label>
+                                <label data-i18n="admin.productRating">Рейтинг *</label>
                                 <input type="number" id="productRating" required min="0" max="5" step="0.1">
                                 <span class="error-message" id="ratingError"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label>Описание *</label>
+                            <label data-i18n="admin.productDescription">Описание *</label>
                             <textarea id="productDescription" required minlength="10"></textarea>
                             <span class="error-message" id="descriptionError"></span>
                         </div>
 
                         <div class="form-group">
-                            <label>URL изображения</label>
-                            <input type="url" id="productImage" placeholder="https://example.com/image.jpg">
+                            <label data-i18n="admin.productImage">URL изображения</label>
+                            <input type="url" id="productImage" placeholder="https://example.com/image.jpg" data-i18n-placeholder="admin.imagePlaceholder">
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Сложность</label>
+                                <label data-i18n="admin.productComplexity">Сложность</label>
                                 <select id="productComplexity">
-                                    <option value="Низкая">Низкая</option>
-                                    <option value="Средняя">Средняя</option>
-                                    <option value="Высокая">Высокая</option>
+                                    <option value="easy" data-i18n="complexity.easy">Низкая</option>
+                                    <option value="medium" data-i18n="complexity.medium">Средняя</option>
+                                    <option value="hard" data-i18n="complexity.hard">Высокая</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label>Длительность</label>
-                                <input type="text" id="productDuration" placeholder="2-4 часа">
+                                <label data-i18n="admin.productDuration">Длительность</label>
+                                <input type="text" id="productDuration" placeholder="2-4 часа" data-i18n-placeholder="admin.durationPlaceholder">
                             </div>
                         </div>
 
                         <div class="form-actions">
-                            <button type="submit" id="saveProductBtn" disabled>Сохранить товар</button>
-                            <button type="button" id="resetFormBtn">Очистить форму</button>
+                            <button type="submit" id="saveProductBtn" disabled data-i18n="admin.saveProduct">Сохранить товар</button>
+                            <button type="button" id="resetFormBtn" data-i18n="admin.resetForm">Очистить форму</button>
                         </div>
                     </form>
                 </div>
 
                 <div class="admin-section">
-                    <h3>Список товаров</h3>
+                    <h3 data-i18n="admin.productsList">Список товаров</h3>
                     <div class="products-list" id="productsList">
-                        <!-- Товары будут загружены через JS -->
                     </div>
                 </div>
             </div>
 
-            <!-- Вкладка управления отзывами -->
             <div class="tab-content" id="reviews-tab">
                 <div class="admin-section">
-                    <h3>Фильтры отзывов</h3>
+                    <h3 data-i18n="admin.reviewFilters">Фильтры отзывов</h3>
                     <div class="filter-controls">
                         <div class="form-group">
-                            <label>Фильтр по товару</label>
+                            <label data-i18n="admin.filterByProduct">Фильтр по товару</label>
                             <select id="reviewProductFilter">
-                                <option value="">Все товары</option>
+                                <option value="" data-i18n="admin.allProducts">Все товары</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label>Фильтр по пользователю</label>
+                            <label data-i18n="admin.filterByUser">Фильтр по пользователю</label>
                             <select id="reviewUserFilter">
-                                <option value="">Все пользователи</option>
+                                <option value="" data-i18n="admin.allUsers">Все пользователи</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label>Статус отзыва</label>
+                            <label data-i18n="admin.reviewStatus">Статус отзыва</label>
                             <select id="reviewStatusFilter">
-                                <option value="">Все статусы</option>
-                                <option value="pending">На модерации</option>
-                                <option value="approved">Одобрено</option>
-                                <option value="rejected">Отклонено</option>
+                                <option value="" data-i18n="admin.allStatuses">Все статусы</option>
+                                <option value="pending" data-i18n="admin.statusPending">На модерации</option>
+                                <option value="approved" data-i18n="admin.statusApproved">Одобрено</option>
+                                <option value="rejected" data-i18n="admin.statusRejected">Отклонено</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="admin-section">
-                    <h3>Список отзывов</h3>
+                    <h3 data-i18n="admin.reviewsList">Список отзывов</h3>
                     <div class="reviews-list" id="reviewsList">
-                        <!-- Отзывы будут загружены через JS -->
                     </div>
                 </div>
             </div>
 
-            <!-- Вкладка статистики -->
             <div class="tab-content" id="stats-tab">
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <h4>Всего товаров</h4>
+                        <h4 data-i18n="admin.totalProducts">Всего товаров</h4>
                         <span class="stat-number" id="totalProducts">0</span>
                     </div>
                     
                     <div class="stat-card">
-                        <h4>Всего отзывов</h4>
+                        <h4 data-i18n="admin.totalReviews">Всего отзывов</h4>
                         <span class="stat-number" id="totalReviews">0</span>
                     </div>
                     
                     <div class="stat-card">
-                        <h4>Всего заказов</h4>
+                        <h4 data-i18n="admin.totalOrders">Всего заказов</h4>
                         <span class="stat-number" id="totalOrders">0</span>
                     </div>
                     
                     <div class="stat-card">
-                        <h4>Общая выручка</h4>
-                        <span class="stat-number" id="totalRevenue">0 руб</span>
+                        <h4 data-i18n="admin.totalRevenue">Общая выручка</h4>
+                        <span class="stat-number" id="totalRevenue">0 <span data-i18n="admin.currency">руб</span></span>
                     </div>
                 </div>
 
                 <div class="admin-section">
-                    <h3>Последние заказы</h3>
+                    <h3 data-i18n="admin.recentOrders">Последние заказы</h3>
                     <div class="orders-list" id="ordersList">
-                        <!-- Заказы будут загружены через JS -->
                     </div>
                 </div>
             </div>
         </section>
-    </div>
-
-    <!-- Модальное окно подтверждения удаления -->
-    <div id="confirmModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <h3>Подтверждение удаления</h3>
-            <p id="confirmMessage">Вы уверены, что хотите удалить этот элемент?</p>
-            <div class="modal-actions">
-                <button id="confirmDeleteBtn" class="btn-danger">Удалить</button>
-                <button id="cancelDeleteBtn">Отмена</button>
+                <footer class="thirteenblock container">
+            <div class="thirteenblock_inner">
+                <div class="footer-section">
+                    <h2 data-i18n="footer.explore">Explore</h2>
+                    <ul>
+                        <li data-i18n="footer.about">About us</li>
+                        <li data-i18n="footer.faq">FAQ</li>
+                        <li data-i18n="footer.press">Press & Blog</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 data-i18n="footer.info">Information</h2>
+                    <ul>
+                        <li data-i18n="footer.guide">Style Guide</li>
+                        <li data-i18n="footer.changelog">Change Log</li>
+                        <li data-i18n="footer.license">License</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 data-i18n="footer.service">Service</h2>
+                    <ul>
+                        <li data-i18n="services.flower">Flower</li>
+                        <li data-i18n="services.tree">Planting</li>
+                        <li data-i18n="services.watering">Watering</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <img src="./img/header/logo.png" alt="Farmzi Logo" class="footer-logo">
+                    <p class="footer-description" data-i18n="footer.description">
+                        Lorem Ipsum is simply dummy text of the 
+                        printing and typeset industry has been 
+                        the industry's standard.
+                    </p>
+                    <div class="footer-phone">
+                        <h4 data-i18n="header.call">Call us:</h4>
+                        <h4>+00 89 458 648</h4>
+                    </div>
+                </div>
             </div>
+        </footer>
+
+        <div class="fourthteen container">
+            <p>© 2022 <span data-i18n="footer.design">design and developed by</span> <span>Brandbes</span>. <span data-i18n="footer.powered">Powered by</span> <span>Webflow</span></p>
         </div>
     </div>
 
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 data-i18n="modal.profile">Профиль пользователя</h3>
+            <form id="userProfileForm">
+                <div class="form-group">
+                    <label data-i18n="form.nickname">Никнейм:</label>
+                    <input type="text" id="userNickname" name="nickname" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.email">Email:</label>
+                    <input type="email" id="userEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.phone">Телефон:</label>
+                    <input type="tel" id="userPhone" name="phone" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" data-i18n="form.save">Сохранить</button>
+                    <button type="button" id="resetSettings" data-i18n="form.reset">Сбросить настройки</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="./js/admin.js"></script>
-        <script src="./js/user.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/translations.js"></script>
+    <script src="./js/user.js"></script>
+    <script src="./js/themes.js"></script>
+    <script src="./js/profile.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             updateNavigation();

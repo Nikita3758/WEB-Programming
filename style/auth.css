@@ -115,7 +115,7 @@
     text-decoration: underline;
 }
 
-#submitBtn {
+#submitBtn, #loginBtn {
     width: 100%;
     padding: 15px;
     background: #177165;
@@ -198,7 +198,6 @@
     margin-top: 5px;
 }
 
-/* Адаптивность */
 @media (max-width: 576px) {
     .auth-container {
         padding: 30px 15px;

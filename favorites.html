@@ -6,89 +6,101 @@
     <title>Farmzi - Избранное</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/favorites.css">
+    <link rel="stylesheet" href="./style/themes.css">
+    <link rel="stylesheet" href="./style/modal-user.css">
 </head>
 <body>
     <div class="wrapper">
-<header class="firstblock container">
-    <div class="header-content">
-        <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
+                <header class="firstblock container">
+            <div class="header-content">
+                <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
 
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-        <nav class="nav">
-            <ul class="nav-menu">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
-                <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
-                <li><a href="login.html" id="loginLink">Войти</a></li>
-                <li><a href="auth.html" id="registerLink">Регистрация</a></li>
-            </ul>
-        </nav>
-        
-        <div class="user-menu" id="userMenu" style="display: none;">
-            <div class="user-avatar" id="userAvatar">Г</div>
-            <div class="user-dropdown" id="userDropdown">
-                <a href="profile.html">Профиль</a>
-                <a href="orders.html">Мои заказы</a>
-                <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+                        <li><a href="catalog.html" data-i18n="nav.catalog">Каталог</a></li>
+                        <li><a href="cart.html" data-i18n="nav.cart">Cart</a></li>
+                        <li><a href="favorites.html" data-i18n="nav.favorites">Favorites</a></li>
+                        <li><a href="feedback.html" id="feedbackLink" style="display: none;" data-i18n="nav.feedback">Отзывы</a></li>
+                        <li><a href="admin.html" id="adminLink" style="display: none;" data-i18n="nav.admin">Админ-панель</a></li>
+                        <li><a href="login.html" id="loginLink" data-i18n="nav.login">Войти</a></li>
+                        <li><a href="auth.html" id="registerLink" data-i18n="nav.register">Регистрация</a></li>
+                    </ul>
+                </nav>
+
+                <div class="control-panel">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <div class="theme-switcher">
+                        <button class="theme-btn light active" data-theme="light">☀️</button>
+                        <button class="theme-btn dark" data-theme="dark">🌙</button>
+                    </div>
+                </div>
+                
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <div class="user-avatar" id="userAvatar">Г</div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html" data-i18n="nav.profile">Профиль</a>
+                        <a href="orders.html" data-i18n="nav.orders">Мои заказы</a>
+                        <a href="#" class="logout-btn" onclick="logout()" data-i18n="nav.logout">Выйти</a>
+                    </div>
+                </div>
+                
+                <div class="header-contact">
+                    <h2 data-i18n="header.call">Позвоните нам:</h2>
+                    <h2>+00 89 458 648</h2>
+                </div>
             </div>
-        </div>
-        
-        <div class="header-contact">
-            <h2>Позвоните нам:</h2>
-            <h2>+00 89 458 648</h2>
-        </div>
-    </div>
-</header>
+        </header>
 
         <section class="favorites-container">
-            <h2 class="section-title">Избранные услуги</h2>
+            <h2 class="section-title" data-i18n="favorites.title">Избранные услуги</h2>
             
             <div class="favorites-grid" id="favoritesGrid"></div>
         </section>
-
-        <footer class="thirteenblock container">
+                <footer class="thirteenblock container">
             <div class="thirteenblock_inner">
                 <div class="footer-section">
-                    <h2>Explore</h2>
+                    <h2 data-i18n="footer.explore">Explore</h2>
                     <ul>
-                        <li>About us</li>
-                        <li>FAQ</li>
-                        <li>Press & Blog</li>
+                        <li data-i18n="footer.about">About us</li>
+                        <li data-i18n="footer.faq">FAQ</li>
+                        <li data-i18n="footer.press">Press & Blog</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h2>Information</h2>
+                    <h2 data-i18n="footer.info">Information</h2>
                     <ul>
-                        <li>Style Guide</li>
-                        <li>Change Log</li>
-                        <li>License</li>
+                        <li data-i18n="footer.guide">Style Guide</li>
+                        <li data-i18n="footer.changelog">Change Log</li>
+                        <li data-i18n="footer.license">License</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h2>Service</h2>
+                    <h2 data-i18n="footer.service">Service</h2>
                     <ul>
-                        <li>Flower</li>
-                        <li>Planting</li>
-                        <li>Watering</li>
+                        <li data-i18n="services.flower">Flower</li>
+                        <li data-i18n="services.tree">Planting</li>
+                        <li data-i18n="services.watering">Watering</li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <img src="./img/header/logo.png" alt="Farmzi Logo" class="footer-logo">
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footer.description">
                         Lorem Ipsum is simply dummy text of the 
                         printing and typeset industry has been 
                         the industry's standard.
                     </p>
                     <div class="footer-phone">
-                        <h4>Call us:</h4>
+                        <h4 data-i18n="header.call">Call us:</h4>
                         <h4>+00 89 458 648</h4>
                     </div>
                 </div>
@@ -96,12 +108,41 @@
         </footer>
 
         <div class="fourthteen container">
-            <p>© 2022 design and developed by <span>Brandbes</span>. Powered by <span>Webflow</span></p>
+            <p>© 2022 <span data-i18n="footer.design">design and developed by</span> <span>Brandbes</span>. <span data-i18n="footer.powered">Powered by</span> <span>Webflow</span></p>
+        </div>
+    </div>
+
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 data-i18n="modal.profile">Профиль пользователя</h3>
+            <form id="userProfileForm">
+                <div class="form-group">
+                    <label data-i18n="form.nickname">Никнейм:</label>
+                    <input type="text" id="userNickname" name="nickname" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.email">Email:</label>
+                    <input type="email" id="userEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.phone">Телефон:</label>
+                    <input type="tel" id="userPhone" name="phone" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" data-i18n="form.save">Сохранить</button>
+                    <button type="button" id="resetSettings" data-i18n="form.reset">Сбросить настройки</button>
+                </div>
+            </form>
         </div>
     </div>
 
     <script src="./js/favorites.js"></script>
-        <script src="./js/user.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="./js/translations.js"></script>
+    <script src="./js/user.js"></script>
+    <script src="./js/themes.js"></script>
+    <script src="./js/profile.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             updateNavigation();

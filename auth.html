@@ -6,12 +6,14 @@
     <title>Farmzi - Регистрация</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/auth.css">
+    <link rel="stylesheet" href="./style/themes.css">
+    <link rel="stylesheet" href="./style/modal-user.css">
 </head>
 <body>
     <div class="wrapper">
-        <header class="firstblock container">
+                <header class="firstblock container">
             <div class="header-content">
-                <img src="./img/header/logo.png" alt="Farmzi Logo" class="logo">
+                <a href="index.html"><img src="./img/header/logo.png" alt="Farmzi Logo" class="logo"></a>
 
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -21,25 +23,39 @@
 
                 <nav class="nav">
                     <ul class="nav-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="catalog.html">Catalog</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="favorites.html">Favorites</a></li>
-                        <li><a href="feedback.html">FeedBack</a></li>
-                        <li><a href="auth.html">Reg</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+                        <li><a href="catalog.html" data-i18n="nav.catalog">Каталог</a></li>
+                        <li><a href="cart.html" data-i18n="nav.cart">Cart</a></li>
+                        <li><a href="favorites.html" data-i18n="nav.favorites">Favorites</a></li>
+                        <li><a href="feedback.html" id="feedbackLink" style="display: none;" data-i18n="nav.feedback">Отзывы</a></li>
+                        <li><a href="admin.html" id="adminLink" style="display: none;" data-i18n="nav.admin">Админ-панель</a></li>
+                        <li><a href="login.html" id="loginLink" data-i18n="nav.login">Войти</a></li>
+                        <li><a href="auth.html" id="registerLink" data-i18n="nav.register">Регистрация</a></li>
                     </ul>
                 </nav>
-                <div class="user-menu">
-                    <div class="user-avatar" id="userAvatar">Г</div>
-                    <div class="user-dropdown" id="userDropdown">
-                        <a href="profile.html">Профиль</a>
-                        <a href="orders.html">Мои заказы</a>
-                        <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+
+                <div class="control-panel">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <div class="theme-switcher">
+                        <button class="theme-btn light active" data-theme="light">☀️</button>
+                        <button class="theme-btn dark" data-theme="dark">🌙</button>
                     </div>
                 </div>
+                
+                <div class="user-menu" id="userMenu" style="display: none;">
+                    <div class="user-avatar" id="userAvatar">Г</div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html" data-i18n="nav.profile">Профиль</a>
+                        <a href="orders.html" data-i18n="nav.orders">Мои заказы</a>
+                        <a href="#" class="logout-btn" onclick="logout()" data-i18n="nav.logout">Выйти</a>
+                    </div>
+                </div>
+                
                 <div class="header-contact">
-                    <h2>Call us:</h2>
+                    <h2 data-i18n="header.call">Позвоните нам:</h2>
                     <h2>+00 89 458 648</h2>
                 </div>
             </div>
@@ -47,67 +63,67 @@
 
         <section class="auth-container">
             <div class="auth-form">
-                <h2 class="section-title">Регистрация</h2>
+                <h2 class="section-title" data-i18n="auth.registrationTitle">Регистрация</h2>
                 
                 <form id="registrationForm">
                     <div class="form-group">
-                        <label>Телефон *</label>
-                        <input type="tel" id="phone" placeholder="+375 XX XXX-XX-XX" required>
+                        <label data-i18n="auth.phoneLabel">Телефон *</label>
+                        <input type="tel" id="phone" placeholder="+375 XX XXX-XX-XX" required data-i18n-placeholder="auth.phonePlaceholder">
                         <span class="error-message" id="phoneError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" id="email" placeholder="example@mail.com" required>
+                        <label data-i18n="auth.emailLabel">Email *</label>
+                        <input type="email" id="email" placeholder="example@mail.com" required data-i18n-placeholder="auth.emailPlaceholder">
                         <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label>Дата рождения *</label>
+                        <label data-i18n="auth.birthDateLabel">Дата рождения *</label>
                         <input type="date" id="birthDate" required>
                         <span class="error-message" id="birthDateError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label>Способ задания пароля</label>
+                        <label data-i18n="auth.passwordMethodLabel">Способ задания пароля</label>
                         <select id="passwordMethod">
-                            <option value="auto">Автоматически</option>
-                            <option value="manual">Ввести самостоятельно</option>
+                            <option value="auto" data-i18n="auth.passwordMethodAuto">Автоматически</option>
+                            <option value="manual" data-i18n="auth.passwordMethodManual">Ввести самостоятельно</option>
                         </select>
                     </div>
 
                     <div class="form-group manual-password" style="display: none;">
-                        <label>Пароль *</label>
-                        <input type="password" id="password" placeholder="Минимум 8 символов">
+                        <label data-i18n="auth.passwordLabel">Пароль *</label>
+                        <input type="password" id="password" placeholder="Минимум 8 символов" data-i18n-placeholder="auth.passwordPlaceholder">
                         <span class="error-message" id="passwordError"></span>
                     </div>
 
                     <div class="form-group manual-password" style="display: none;">
-                        <label>Повторите пароль *</label>
+                        <label data-i18n="auth.confirmPasswordLabel">Повторите пароль *</label>
                         <input type="password" id="confirmPassword">
                         <span class="error-message" id="confirmPasswordError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label>Имя *</label>
+                        <label data-i18n="auth.firstNameLabel">Имя *</label>
                         <input type="text" id="firstName" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Фамилия *</label>
+                        <label data-i18n="auth.lastNameLabel">Фамилия *</label>
                         <input type="text" id="lastName" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Отчество</label>
+                        <label data-i18n="auth.patronymicLabel">Отчество</label>
                         <input type="text" id="patronymic">
                     </div>
 
                     <div class="form-group">
-                        <label>Никнейм</label>
+                        <label data-i18n="auth.nicknameLabel">Никнейм</label>
                         <div class="nickname-group">
                             <input type="text" id="nickname" readonly>
-                            <button type="button" id="generateNickname">Сгенерировать</button>
+                            <button type="button" id="generateNickname" data-i18n="auth.generateNickname">Сгенерировать</button>
                         </div>
                         <span class="error-message" id="nicknameError"></span>
                     </div>
@@ -115,20 +131,94 @@
                     <div class="form-group">
                         <label class="checkbox-label">
                             <input type="checkbox" id="agreement" required>
-                            <span>Я прочитал и согласен с <a href="#">пользовательским соглашением</a> *</span>
+                            <span data-i18n="auth.agreementText">Я прочитал и согласен с <a href="#">пользовательским соглашением</a> *</span>
                         </label>
                     </div>
 
-                    <button type="submit" id="submitBtn" disabled>Зарегистрироваться</button>
+                    <button type="submit" id="submitBtn" disabled data-i18n="auth.registerButton">Зарегистрироваться</button>
                 </form>
 
                 <p class="auth-switch">
-                    Уже есть аккаунт? <a href="#" id="switchToLogin">Войти</a>
+                    <span data-i18n="auth.haveAccount">Уже есть аккаунт?</span> <a href="login.html" id="switchToLogin" data-i18n="auth.loginLink">Войти</a>
                 </p>
             </div>
         </section>
+                <footer class="thirteenblock container">
+            <div class="thirteenblock_inner">
+                <div class="footer-section">
+                    <h2 data-i18n="footer.explore">Explore</h2>
+                    <ul>
+                        <li data-i18n="footer.about">About us</li>
+                        <li data-i18n="footer.faq">FAQ</li>
+                        <li data-i18n="footer.press">Press & Blog</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 data-i18n="footer.info">Information</h2>
+                    <ul>
+                        <li data-i18n="footer.guide">Style Guide</li>
+                        <li data-i18n="footer.changelog">Change Log</li>
+                        <li data-i18n="footer.license">License</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 data-i18n="footer.service">Service</h2>
+                    <ul>
+                        <li data-i18n="services.flower">Flower</li>
+                        <li data-i18n="services.tree">Planting</li>
+                        <li data-i18n="services.watering">Watering</li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <img src="./img/header/logo.png" alt="Farmzi Logo" class="footer-logo">
+                    <p class="footer-description" data-i18n="footer.description">
+                        Lorem Ipsum is simply dummy text of the 
+                        printing and typeset industry has been 
+                        the industry's standard.
+                    </p>
+                    <div class="footer-phone">
+                        <h4 data-i18n="header.call">Call us:</h4>
+                        <h4>+00 89 458 648</h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="fourthteen container">
+            <p>© 2022 <span data-i18n="footer.design">design and developed by</span> <span>Brandbes</span>. <span data-i18n="footer.powered">Powered by</span> <span>Webflow</span></p>
+        </div>
     </div>
 
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 data-i18n="modal.profile">Профиль пользователя</h3>
+            <form id="userProfileForm">
+                <div class="form-group">
+                    <label data-i18n="form.nickname">Никнейм:</label>
+                    <input type="text" id="userNickname" name="nickname" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.email">Email:</label>
+                    <input type="email" id="userEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.phone">Телефон:</label>
+                    <input type="tel" id="userPhone" name="phone" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" data-i18n="form.save">Сохранить</button>
+                    <button type="button" id="resetSettings" data-i18n="form.reset">Сбросить настройки</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="./js/storage.js"></script>
+    <script src="./js/translations.js"></script>
+    <script src="./js/user.js"></script>
+    <script src="./js/themes.js"></script>
+    <script src="./js/profile.js"></script>
     <script src="./js/auth.js"></script>
 </body>
 </html>

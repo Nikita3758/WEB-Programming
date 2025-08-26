@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css">
-    <title>Farmzi - Gardening & Landscaping Services</title>
+    <link rel="stylesheet" href="./style/themes.css">
+    <link rel="stylesheet" href="./style/modal-user.css">
+    <title data-i18n="exploreTravel">Farmzi - Gardening & Landscaping Services</title>
 </head>
 <body>
     <div class="wrapper">
@@ -21,28 +23,39 @@
 
                 <nav class="nav">
                     <ul class="nav-menu">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="catalog.html">Каталог</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="favorites.html">Favorites</a></li>
-                        <li><a href="feedback.html" id="feedbackLink" style="display: none;">Отзывы</a></li>
-                        <li><a href="admin.html" id="adminLink" style="display: none;">Админ-панель</a></li>
-                        <li><a href="login.html" id="loginLink">Войти</a></li>
-                        <li><a href="auth.html" id="registerLink">Регистрация</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+                        <li><a href="catalog.html" data-i18n="nav.catalog">Каталог</a></li>
+                        <li><a href="cart.html" data-i18n="nav.cart">Cart</a></li>
+                        <li><a href="favorites.html" data-i18n="nav.favorites">Favorites</a></li>
+                        <li><a href="feedback.html" id="feedbackLink" style="display: none;" data-i18n="nav.feedback">Отзывы</a></li>
+                        <li><a href="admin.html" id="adminLink" style="display: none;" data-i18n="nav.admin">Админ-панель</a></li>
+                        <li><a href="login.html" id="loginLink" data-i18n="nav.login">Войти</a></li>
+                        <li><a href="auth.html" id="registerLink" data-i18n="nav.register">Регистрация</a></li>
                     </ul>
                 </nav>
+
+                <div class="control-panel">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <div class="theme-switcher">
+                        <button class="theme-btn light active" data-theme="light">☀️</button>
+                        <button class="theme-btn dark" data-theme="dark">🌙</button>
+                    </div>
+                </div>
                 
                 <div class="user-menu" id="userMenu" style="display: none;">
                     <div class="user-avatar" id="userAvatar">Г</div>
                     <div class="user-dropdown" id="userDropdown">
-                        <a href="profile.html">Профиль</a>
-                        <a href="orders.html">Мои заказы</a>
-                        <a href="#" class="logout-btn" onclick="logout()">Выйти</a>
+                        <a href="profile.html" data-i18n="nav.profile">Профиль</a>
+                        <a href="orders.html" data-i18n="nav.orders">Мои заказы</a>
+                        <a href="#" class="logout-btn" onclick="logout()" data-i18n="nav.logout">Выйти</a>
                     </div>
                 </div>
                 
                 <div class="header-contact">
-                    <h2>Позвоните нам:</h2>
+                    <h2 data-i18n="header.call">Позвоните нам:</h2>
                     <h2>+00 89 458 648</h2>
                 </div>
             </div>
@@ -50,8 +63,8 @@
 
         <section class="secondblock container">
             <div class="hero-content">
-                <h4 class="section-subtitle">Make a garden with musion.</h4>
-                <h2 class="hero-title">
+                <h4 class="section-subtitle" data-i18n="hero.subtitle">Make a garden with musion.</h4>
+                <h2 class="hero-title" data-i18n="hero.title">
                     If you have a <br class="desktop-only">
                     garden and a <br class="desktop-only">
                     library, you have <br class="desktop-only">
@@ -59,15 +72,15 @@
                     need.
                 </h2>
                 <h4 class="quote-author">— Marcus Tullius Cicero</h4>
-                <a href="#" class="cta-button">All Services</a>
+                <a href="#" class="cta-button" data-i18n="hero.cta">All Services</a>
             </div>
             <img src="./img/secondblock/img.png" alt="Watering flowers in garden" class="hero-image">
         </section>
 
         <section class="thirdblock container">
             <div class="thirdblock_inner">
-                <h4 class="section-subtitle">— About Company</h4>
-                <h3 class="section-title">
+                <h4 class="section-subtitle" data-i18n="about.subtitle">— About Company</h4>
+                <h3 class="section-title" data-i18n="about.title">
                     Farmzi have 35 years of experience and know 
                     smart way to grow and design your beautiful 
                     garden.
@@ -75,32 +88,32 @@
                 <div class="about-content">
                     <img src="./img/thirdblock/img.png" alt="Gardener taking care of plants" class="about-image">
                     <div class="about-text">
-                        <h2>Who we are?</h2>
-                        <p class="description">
+                        <h2 data-i18n="about.who">Who we are?</h2>
+                        <p class="description" data-i18n="about.description1">
                             Lorem Ipsum is simply dummy text of the printing and 
                             typeset industry. Lorem Ipsum has been the industry's 
                             standard dumm ever since the 1500s, when an unknown 
                             printer took a galley scrambled it make a type specimen book.
                         </p>
-                        <blockquote class="quote">
+                        <blockquote class="quote" data-i18n="about.quote">
                             "Lorem Ipsum is simply dummy text of the 
                             printn industry lorem epsum has been the 
                             industry and scrambled it make a type 
                             specimen book".
                         </blockquote>
-                        <h2>Mission and vision</h2>
-                        <p class="description">
+                        <h2 data-i18n="about.mission">Mission and vision</h2>
+                        <p class="description" data-i18n="about.description2">
                             Lorem Ipsum is simply dummy text of the printing and 
                             typeset industry. Lorem Ipsum has been the industry's 
                             standard dumm ever since the 1500s, when an unknown 
                             printer took a galley scrambled it make a type specimen book.
                         </p>
-                        <p class="description">
+                        <p class="description" data-i18n="about.description3">
                             Lorem Ipsum is simply dummy text of the printing and 
                             typeset industry. Lorem Ipsum has been the industry's 
                             standard dumm scrambled it make a type specimen book.
                         </p>
-                        <a href="#" class="learn-more-btn">Learn More</a>
+                        <a href="#" class="learn-more-btn" data-i18n="button.learn">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -108,47 +121,47 @@
 
         <section class="fourthblock container">
             <div class="fourthblock_inner">
-                <h4 class="section-subtitle">— Our Services</h4>
-                <h3 class="section-title">
+                <h4 class="section-subtitle" data-i18n="services.subtitle">— Our Services</h4>
+                <h3 class="section-title" data-i18n="services.title">
                     Farmzi always provide amazing gardening and 
                     landscaping services.
                 </h3>
                 <div class="services-grid">
                     <div class="service-item">
                         <img src="./img/fourthblock/firstimg.png" alt="Flower planting service">
-                        <h4>Flower</h4>
-                        <h3>Planting Flower</h3>
+                        <h4 data-i18n="services.flowerCategory">Flower</h4>
+                        <h3 data-i18n="services.flower">Planting Flower</h3>
                     </div>
                     <div class="service-item">
                         <img src="./img/fourthblock/secondimg.png" alt="Tree planting service">
-                        <h4>Planting</h4>
-                        <h3>Tree Planting</h3>
+                        <h4 data-i18n="services.plantingCategory">Planting</h4>
+                        <h3 data-i18n="services.tree">Tree Planting</h3>
                     </div>
                     <div class="service-item">
                         <img src="./img/fourthblock/thirdimg.png" alt="Rush removal service">
-                        <h4>Rush</h4>
-                        <h3>Rush Removal</h3>
+                        <h4 data-i18n="services.rushCategory">Rush</h4>
+                        <h3 data-i18n="services.rush">Rush Removal</h3>
                     </div>
                     <div class="service-item">
                         <img src="./img/fourthblock/fourthimg.png" alt="Garden watering service">
-                        <h4>Watering</h4>
-                        <h3>Garden Watering</h3>
+                        <h4 data-i18n="services.wateringCategory">Watering</h4>
+                        <h3 data-i18n="services.watering">Garden Watering</h3>
                     </div>
                 </div>
-                <a href="#" class="more-services-btn">More Service</a>
+                <a href="#" class="more-services-btn" data-i18n="button.more">More Service</a>
             </div>
         </section>
 
         <section class="fifthblock container">
             <div class="fifthblock_inner">
-                <h4 class="section-subtitle">— Call To Action</h4>
-                <h3 class="cta-title">
+                <h4 class="section-subtitle" data-i18n="cta.subtitle">— Call To Action</h4>
+                <h3 class="cta-title" data-i18n="cta.title">
                     If you need any gardening 
                     service, you can contact with 
                     Farmzi.
                 </h3>
                 <div class="contact-box">
-                    <h4>Our Services</h4>
+                    <h4 data-i18n="cta.services">Our Services</h4>
                     <h4>+00 89 458 648</h4>
                 </div>
             </div>
@@ -156,35 +169,35 @@
 
         <section class="sixthblock container">
             <div class="sixthblock_inner">
-                <h4 class="section-subtitle">— Team Members</h4>
-                <h2 class="section-title">
+                <h4 class="section-subtitle" data-i18n="team.subtitle">— Team Members</h4>
+                <h2 class="section-title" data-i18n="team.title">
                     Farmzi feel proud for skilled 
                     team members.
                 </h2>
                 <div class="team-grid">
                     <div class="team-member">
                         <img src="./img/sixthblock/firstimg.png" alt="Shoshana Horsley - Founder">
-                        <h4>Founder of Farmzi</h4>
+                        <h4 data-i18n="team.founder">Founder of Farmzi</h4>
                         <h2>Shoshana Horsley</h2>
-                        <p class="member-description">
+                        <p class="member-description" data-i18n="team.description1">
                             Lorem Ipsum is simply dummy text of the 
                             printing and industry has been the indust.
                         </p>
                     </div>
                     <div class="team-member">
                         <img src="./img/sixthblock/secondimg.png" alt="Kristofer Pennell - Senior Gardener">
-                        <h4>Senior Gardener</h4>
+                        <h4 data-i18n="team.gardener">Senior Gardener</h4>
                         <h2>Kristofer Pennell</h2>
-                        <p class="member-description">
+                        <p class="member-description" data-i18n="team.description2">
                             It is a long established fact that a reader 
                             will distracted the readable content.
                         </p>
                     </div>
                     <div class="team-member">
                         <img src="./img/sixthblock/thirdimg.png" alt="Matthew Jackson - Garden Designer">
-                        <h4>Garden Designer</h4>
+                        <h4 data-i18n="team.designer">Garden Designer</h4>
                         <h2>Matthew Jackson</h2>
-                        <p class="member-description">
+                        <p class="member-description" data-i18n="team.description3">
                             There are many variations of passages of 
                             Lorem Ipsum available, but the majority
                         </p>
@@ -196,8 +209,8 @@
         <section class="seventhblock container">
             <div class="seventhblock_inner">
                 <div class="video-content">
-                    <h4 class="section-subtitle">— Company intro video</h4>
-                    <h3 class="video-title">
+                    <h4 class="section-subtitle" data-i18n="video.subtitle">— Company intro video</h4>
+                    <h3 class="video-title" data-i18n="video.title">
                         See our intro video and 
                         lets start your dream 
                         project.
@@ -211,19 +224,19 @@
             <div class="eighthblock_inner">
                 <div class="stat-item">
                     <h2>847 +</h2>
-                    <h4>— Project Done</h4>
+                    <h4 data-i18n="stats.projects">— Project Done</h4>
                 </div>
                 <div class="stat-item">
                     <h2>753 +</h2>
-                    <h4>— Happy Client</h4>
+                    <h4 data-i18n="stats.clients">— Happy Client</h4>
                 </div>
                 <div class="stat-item">
                     <h2>284 +</h2>
-                    <h4>— Team Member</h4>
+                    <h4 data-i18n="stats.members">— Team Member</h4>
                 </div>
                 <div class="stat-item">
                     <h2>98 +</h2>
-                    <h4>— Winning Award</h4>
+                    <h4 data-i18n="stats.awards">— Winning Award</h4>
                 </div>
             </div>
         </section>
@@ -232,9 +245,9 @@
             <div class="ninethblock_inner">
                 <div class="project-info">
                     <ul class="project-details">
-                        <li><span class="detail-label">Project:</span> Farm Design</li>
-                        <li><span class="detail-label">Client:</span> Alex Milan</li>
-                        <li><span class="detail-label">Location:</span> Mississippi, USA</li>
+                        <li><span class="detail-label" data-i18n="project.label">Project:</span> <span data-i18n="project.name">Farm Design</span></li>
+                        <li><span class="detail-label" data-i18n="client.label">Client:</span> <span data-i18n="client.name">Alex Milan</span></li>
+                        <li><span class="detail-label" data-i18n="location.label">Location:</span> <span data-i18n="location.name">Mississippi, USA</span></li>
                     </ul>
                 </div>
             </div>
@@ -245,10 +258,10 @@
 
         <section class="tenthblock container">
             <div class="tenthblock_inner">
-                <h4 class="section-subtitle">— Happy Clients</h4>
-                <h2 class="section-title">Farmzi got best feedback from happy clients</h2>
+                <h4 class="section-subtitle" data-i18n="testimonials.subtitle">— Happy Clients</h4>
+                <h2 class="section-title" data-i18n="testimonials.title">Farmzi got best feedback from happy clients</h2>
                 <div class="testimonial">
-                    <blockquote class="testimonial-text">
+                    <blockquote class="testimonial-text" data-i18n="testimonials.text">
                         "Lorem Ipsum is simply dummy text the 
                         printing and typesetting industry. Lorem 
                         has been the industry's standard dummy 
@@ -257,8 +270,8 @@
                         make a type specimen book"
                     </blockquote>
                     <div class="client-info">
-                        <h5 class="client-role">— Designer of Musion</h5>
-                        <h3 class="client-name">Rachel Patterson</h3>
+                        <h5 class="client-role" data-i18n="testimonials.role">— Designer of Musion</h5>
+                        <h3 class="client-name" data-i18n="testimonials.name">Rachel Patterson</h3>
                     </div>
                 </div>
             </div>
@@ -266,8 +279,8 @@
 
         <section class="eleventhblock container">
             <div class="eleventhblock_inner">
-                <h4 class="section-subtitle">— Latest News</h4>
-                <h2 class="section-title">
+                <h4 class="section-subtitle" data-i18n="blog.subtitle">— Latest News</h4>
+                <h2 class="section-title" data-i18n="blog.title">
                     Check now latest tips and tricks of gardening and 
                     landscaping from blog.
                 </h2>
@@ -275,31 +288,31 @@
                     <article class="blog-post">
                         <img src="./img/eleventhblock/firstimg.png" alt="Garden harvesting tips">
                         <div class="post-content">
-                            <p class="post-meta">Date: <span>March 23, 2022</span> By: <span>Kristofer Pennell</span></p>
-                            <h2 class="post-title">
+                            <p class="post-meta"><span data-i18n="blog.date">Date:</span> <span data-i18n="blog.date1">March 23, 2022</span> <span data-i18n="blog.by">By:</span> <span data-i18n="blog.author1">Kristofer Pennell</span></p>
+                            <h2 class="post-title" data-i18n="blog.title1">
                                 If You're Not Getting Your Garden 
                                 Harvested Things!
                             </h2>
-                            <p class="post-excerpt">
+                            <p class="post-excerpt" data-i18n="blog.excerpt1">
                                 Lorem Ipsum is simply dummy text the printing and 
                                 tpesetting industry. Lorem industry's standard dummy.
                             </p>
-                            <a href="#" class="read-more-btn">Read More</a>
+                            <a href="#" class="read-more-btn" data-i18n="button.read">Read More</a>
                         </div>
                     </article>
                     <article class="blog-post">
                         <img src="./img/eleventhblock/secondimg.png" alt="Flower planting guide">
                         <div class="post-content">
-                            <p class="post-meta">Date: <span>March 23, 2022</span> By: <span>Kristofer Pennell</span></p>
-                            <h2 class="post-title">
+                            <p class="post-meta"><span data-i18n="blog.date">Date:</span> <span data-i18n="blog.date2">March 23, 2022</span> <span data-i18n="blog.by">By:</span> <span data-i18n="blog.author2">Kristofer Pennell</span></p>
+                            <h2 class="post-title" data-i18n="blog.title2">
                                 How to Plant Flowers with a Success Rate 
                                 of 90% or Higher!
                             </h2>
-                            <p class="post-excerpt">
+                            <p class="post-excerpt" data-i18n="blog.excerpt2">
                                 Lorem Ipsum is simply dummy text the printing and 
                                 tpesetting industry. Lorem industry's standard dummy.
                             </p>
-                            <a href="#" class="read-more-btn">Read More</a>
+                            <a href="#" class="read-more-btn" data-i18n="button.read">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -319,38 +332,38 @@
         <footer class="thirteenblock container">
             <div class="thirteenblock_inner">
                 <div class="footer-section">
-                    <h2>Explore</h2>
+                    <h2 data-i18n="footer.explore">Explore</h2>
                     <ul>
-                        <li>About us</li>
-                        <li>FAQ</li>
-                        <li>Press & Blog</li>
+                        <li data-i18n="footer.about">About us</li>
+                        <li data-i18n="footer.faq">FAQ</li>
+                        <li data-i18n="footer.press">Press & Blog</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h2>Information</h2>
+                    <h2 data-i18n="footer.info">Information</h2>
                     <ul>
-                        <li>Style Guide</li>
-                        <li>Change Log</li>
-                        <li>License</li>
+                        <li data-i18n="footer.guide">Style Guide</li>
+                        <li data-i18n="footer.changelog">Change Log</li>
+                        <li data-i18n="footer.license">License</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h2>Service</h2>
+                    <h2 data-i18n="footer.service">Service</h2>
                     <ul>
-                        <li>Flower</li>
-                        <li>Planting</li>
-                        <li>Watering</li>
+                        <li data-i18n="services.flower">Flower</li>
+                        <li data-i18n="services.tree">Planting</li>
+                        <li data-i18n="services.watering">Watering</li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <img src="./img/header/logo.png" alt="Farmzi Logo" class="footer-logo">
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footer.description">
                         Lorem Ipsum is simply dummy text of the 
                         printing and typeset industry has been 
                         the industry's standard.
                     </p>
                     <div class="footer-phone">
-                        <h4>Call us:</h4>
+                        <h4 data-i18n="header.call">Call us:</h4>
                         <h4>+00 89 458 648</h4>
                     </div>
                 </div>
@@ -358,42 +371,38 @@
         </footer>
 
         <div class="fourthteen container">
-            <p>© 2022 design and developed by <span>Brandbes</span>. Powered by <span>Webflow</span></p>
+            <p>© 2022 <span data-i18n="footer.design">design and developed by</span> <span>Brandbes</span>. <span data-i18n="footer.powered">Powered by</span> <span>Webflow</span></p>
         </div>
     </div>
 
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 data-i18n="modal.profile">Профиль пользователя</h3>
+            <form id="userProfileForm">
+                <div class="form-group">
+                    <label data-i18n="form.nickname">Никнейм:</label>
+                    <input type="text" id="userNickname" name="nickname" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.email">Email:</label>
+                    <input type="email" id="userEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="form.phone">Телефон:</label>
+                    <input type="tel" id="userPhone" name="phone" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" data-i18n="form.save">Сохранить</button>
+                    <button type="button" id="resetSettings" data-i18n="form.reset">Сбросить настройки</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/storage.js"></script>
+    <script src="./js/translations.js"></script>
     <script src="./js/user.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            updateNavigation();
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof updateNavigation === 'function') {
-                updateNavigation();
-            }
-        });
-    </script>
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.mobile-menu-toggle');
-            const nav = document.querySelector('.nav');
-            
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                });
-            });
-        });
-    </script>
+    <script src="./js/themes.js"></script>
+    <script src="./js/profile.js"></script>
 </body>
 </html>

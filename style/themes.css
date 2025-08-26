@@ -1,0 +1,209 @@
+.dark-theme {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #adb5bd;
+    --accent-color: #4ecdc4;
+    --border-color: #495057;
+    --shadow: 0 2px 10px rgba(0,0,0,0.3);
+    --modal-bg: #2d2d2d;
+    --modal-text: #ffffff;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.dark-theme header,
+.dark-theme footer,
+.dark-theme .finder-select,
+.dark-theme .testimonial-card,
+.dark-theme .story-content,
+.dark-theme .story-card,
+.dark-theme .controls-panel,
+.dark-theme .search-box input,
+.dark-theme .filters select,
+.dark-theme .destination-card,
+.dark-theme .destination-category,
+.dark-theme .pagination button,
+.dark-theme .value-card,
+.dark-theme .team-member,
+.dark-theme .about-stats,
+.dark-theme .value-icon,
+.dark-theme .benefit-card,
+.dark-theme .benefit-icon,
+.dark-theme .partner-card,
+.dark-theme .partner-logo,
+.dark-theme .tab-link,
+.dark-theme .become-partner,
+.dark-theme .form-group input,
+.dark-theme .form-group textarea,
+.dark-theme .form-group select,
+.dark-theme .admin-table thead tr th,
+.dark-theme .testimonial-item,
+.dark-theme .article-info,
+.dark-theme .article-category,
+.dark-theme .article-title,
+.dark-theme .article-excerpt,
+.dark-theme .article-date,
+.dark-theme .read-more,
+.dark-theme .article-content-full,
+.dark-theme .admin-link,
+.dark-theme .footer-section h3,
+.dark-theme .footer-links li a,
+.dark-theme .footer-text,
+.dark-theme .copyright,
+.dark-theme .modal-content,
+.dark-theme .tenthblock,
+.dark-theme .testimonial,
+.dark-theme .fourthblock_inner,
+.dark-theme .filters-section,
+.dark-theme .feedback-form,
+.dark-theme .auth-form,
+.dark-theme .admin-section,
+.dark-theme .tab-btn {
+    background-color: var(--modal-bg);
+    color: var(--modal-text);
+}
+
+.dark-theme .text-section1 h1,
+.dark-theme .text-section2 h2,
+.dark-theme .text-section2 p,
+.dark-theme .btn-section3,
+.dark-theme .destination-name,
+.dark-theme .destination-location,
+.dark-theme .text-section4 h2,
+.dark-theme .text-section4 p,
+.dark-theme .section-title,
+.dark-theme .testimonial-text,
+.dark-theme .testimonial-author,
+.dark-theme .testimonial-position,
+.dark-theme .story-excerpt,
+.dark-theme .destination-description,
+.dark-theme .about-hero-content h1,
+.dark-theme .about-hero-content p,
+.dark-theme .about-values h2,
+.dark-theme .value-card h3,
+.dark-theme .value-card p,
+.dark-theme .about-team h2,
+.dark-theme .about-team p,
+.dark-theme .team-member h3,
+.dark-theme .partners-hero-content h1,
+.dark-theme .partners-hero-content p,
+.dark-theme .partners-benefits h2,
+.dark-theme .partners-benefits p,
+.dark-theme .partners-benefits h3,
+.dark-theme .partners-categories h2,
+.dark-theme .partner-card h3,
+.dark-theme .partner-card p,
+.dark-theme .partner-link,
+.dark-theme .become-partner-content h2,
+.dark-theme .become-partner-content p,
+.dark-theme .become-partner-content label,
+.dark-theme .page-header h1,
+.dark-theme .page-header p,
+.dark-theme .text-section1 h2 {
+    color: var(--modal-text);
+}
+
+nav ul li a {
+    color: var(--text-secondary);
+}
+
+nav ul li a:hover {
+    color: var(--text-primary);
+}
+
+.control-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    background: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.theme-btn, .lang-btn {
+    padding: 8px 15px;
+    border: 2px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.lang-btn:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.theme-btn.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.lang-btn.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.service-item, .product-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+input, select, textarea {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.cta-button, .btn-primary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.cta-button:hover, .btn-primary:hover {
+    background: var(--accent-color);
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.modal-content {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .control-panel {
+        bottom: 10px;
+        right: 10px;
+        flex-direction: column;
+    }
+    
+    .theme-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

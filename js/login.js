@@ -3,6 +3,7 @@ const API_URL = 'http://localhost:3000';
 document.addEventListener('DOMContentLoaded', function() {
     initializeLoginForm();
     checkRememberedUser();
+    updateTranslations(localStorage.getItem('language') || 'ru');
 });
 
 function initializeLoginForm() {
@@ -47,6 +48,7 @@ async function handleLogin(e) {
     const login = document.getElementById('login').value;
     const password = document.getElementById('loginPassword').value;
     const rememberMe = document.getElementById('rememberMe').checked;
+    const lang = localStorage.getItem('language') || 'ru';
 
     document.getElementById('loginError').textContent = '';
     document.getElementById('passwordError').textContent = '';
@@ -61,14 +63,14 @@ async function handleLogin(e) {
         const users = await response.json();
         
         if (users.length === 0) {
-            document.getElementById('loginError').textContent = 'Пользователь не найден';
+            document.getElementById('loginError').textContent = translations[lang]['login.userNotFound'] || 'Пользователь не найден';
             return;
         }
 
         const user = users[0];
 
         if (password !== user.password) {
-            document.getElementById('passwordError').textContent = 'Неверный пароль';
+            document.getElementById('passwordError').textContent = translations[lang]['login.wrongPassword'] || 'Неверный пароль';
             return;
         }
 
@@ -88,7 +90,7 @@ async function handleLogin(e) {
 
     } catch (error) {
         console.error('Ошибка входа:', error);
-        document.getElementById('loginError').textContent = 'Ошибка сервера';
+        document.getElementById('loginError').textContent = translations[lang]['login.serverError'] || 'Ошибка сервера';
     }
 }
 
@@ -97,6 +99,7 @@ async function handlePasswordRecovery(e) {
     
     const email = document.getElementById('recoveryEmail').value;
     const errorElement = document.getElementById('recoveryError');
+    const lang = localStorage.getItem('language') || 'ru';
 
     errorElement.textContent = '';
 
@@ -105,16 +108,16 @@ async function handlePasswordRecovery(e) {
         const users = await response.json();
         
         if (users.length === 0) {
-            errorElement.textContent = 'Пользователь с таким email не найден';
+            errorElement.textContent = translations[lang]['login.emailNotFound'] || 'Пользователь с таким email не найден';
             return;
         }
 
-        alert('Ссылка для восстановления пароля отправлена на ваш email');
+        alert(translations[lang]['login.recoverySent'] || 'Ссылка для восстановления пароля отправлена на ваш email');
         document.getElementById('passwordModal').style.display = 'none';
         
     } catch (error) {
         console.error('Ошибка восстановления пароля:', error);
-        errorElement.textContent = 'Ошибка сервера';
+        errorElement.textContent = translations[lang]['login.serverError'] || 'Ошибка сервера';
     }
 }
 
