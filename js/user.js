@@ -12,7 +12,6 @@ function initializeUserMenu() {
             userDropdown.classList.toggle('show');
         });
         
-        // Закрытие меню при клике вне его
         document.addEventListener('click', function(e) {
             if (!userAvatar.contains(e.target) && !userDropdown.contains(e.target)) {
                 userDropdown.classList.remove('show');
