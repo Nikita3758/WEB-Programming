@@ -1,14 +1,11 @@
 const API_URL = 'http://localhost:3000';
 
-// Загрузка корзины при открытии страницы
 document.addEventListener('DOMContentLoaded', function() {
     loadCart();
-    
-    // Обработчик для кнопки оформления заказа
+
     document.getElementById('checkoutBtn').addEventListener('click', checkout);
 });
 
-// Загрузка корзины
 function loadCart() {
     fetch(`${API_URL}/cart`)
         .then(response => response.json())
@@ -21,7 +18,6 @@ function loadCart() {
         });
 }
 
-// Отображение корзины
 function displayCart(cart) {
     const container = document.getElementById('cartItems');
     
@@ -47,8 +43,7 @@ function displayCart(cart) {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.dataset.id = item.id;
-        
-        // ПРАВИЛЬНОЕ формирование HTML с вызовом функции
+
         cartItem.innerHTML = `
             <img src="${item.image}" alt="${item.name}" class="cart-item-image">
             <div class="cart-item-info">
@@ -70,7 +65,6 @@ function displayCart(cart) {
     });
 }
 
-// Обновление итоговой суммы
 function updateSummary(cart) {
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     
@@ -78,7 +72,6 @@ function updateSummary(cart) {
     document.getElementById('total').textContent = subtotal + ' руб.';
 }
 
-// Изменение количества товара
 function changeQuantity(productId, newQuantity) {
     if (newQuantity < 1) newQuantity = 1;
     
@@ -92,12 +85,10 @@ function changeQuantity(productId, newQuantity) {
         })
     })
     .then(() => {
-        // Перезагружаем корзину
         loadCart();
     });
 }
 
-// Изменение количества товара
 function changeQuantity(cartItemId, newQuantity) {
     if (newQuantity < 1) newQuantity = 1;
     
@@ -111,23 +102,21 @@ function changeQuantity(cartItemId, newQuantity) {
         })
     })
     .then(() => {
-        // Перезагружаем корзину
+
         loadCart();
     });
 }
 
-// Удаление из корзины (глобальная функция)
 function removeFromCart(cartItemId) {
     fetch(`${API_URL}/cart/${cartItemId}`, {
         method: 'DELETE'
     })
     .then(() => {
-        // Перезагружаем корзину
+
         loadCart();
     });
 }
 
-// Оформление заказа
 function checkout() {
     fetch(`${API_URL}/cart`)
         .then(response => response.json())
@@ -136,18 +125,15 @@ function checkout() {
                 alert('Корзина пуста!');
                 return;
             }
-            
-            // Очищаем корзину
+
             cart.forEach(item => {
                 fetch(`${API_URL}/cart/${item.id}`, {
                     method: 'DELETE'
                 });
             });
-            
-            // Показываем сообщение об успешном заказе
+
             alert('Заказ успешно оформлен! Спасибо за покупку!');
-            
-            // Перезагружаем корзину
+
             loadCart();
         });
 }
