@@ -1312,7 +1312,6 @@ img {
     animation: fadeIn 0.6s ease-out;
 }
 
-/* Стили для отображения пользователя */
 .user-menu {
     position: relative;
     display: flex;

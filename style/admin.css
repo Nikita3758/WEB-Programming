@@ -301,7 +301,6 @@
     color: #27ae60;
 }
 
-/* Модальное окно */
 .modal {
     position: fixed;
     top: 0;
@@ -343,7 +342,6 @@
     background: #ee5253;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
